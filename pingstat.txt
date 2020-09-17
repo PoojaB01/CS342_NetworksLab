@@ -1,0 +1,1153 @@
+Wednesday 8pm
+PING facebook.com (157.240.16.35) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=117 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=81.9 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=49.4 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=46.6 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=65.2 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=69.0 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=62.5 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=60.3 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=79.1 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=68.7 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=54.6 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=56.8 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=79.8 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=80.4 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=48.6 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=66.5 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=65.7 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=41.4 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=79.9 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=58.8 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=58.8 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=57.4 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=52.6 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=31.1 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=71.2 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24042ms
+rtt min/avg/max/mdev = 31.097/64.155/117.417/16.737 ms
+PING google.com (142.250.67.142) 56(84) bytes of data.
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=1 ttl=116 time=85.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=2 ttl=116 time=73.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=3 ttl=116 time=109 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=4 ttl=116 time=70.2 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=5 ttl=116 time=68.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=6 ttl=116 time=64.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=7 ttl=116 time=64.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=8 ttl=116 time=61.6 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=9 ttl=116 time=60.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=10 ttl=116 time=99.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=11 ttl=116 time=98.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=12 ttl=116 time=96.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=13 ttl=116 time=54.1 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=14 ttl=116 time=94.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=15 ttl=116 time=91.9 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=16 ttl=116 time=90.9 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=17 ttl=116 time=86.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=18 ttl=116 time=88.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=19 ttl=116 time=84.6 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=20 ttl=116 time=210 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=21 ttl=116 time=49.5 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=22 ttl=116 time=77.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=23 ttl=116 time=86.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=24 ttl=116 time=72.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=25 ttl=116 time=74.7 ms
+
+--- google.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24041ms
+rtt min/avg/max/mdev = 49.544/84.552/210.415/29.763 ms
+PING yahoo.com (74.6.231.20) 56(84) bytes of data.
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=1 ttl=50 time=592 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=2 ttl=50 time=290 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=3 ttl=50 time=431 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=4 ttl=50 time=453 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=5 ttl=50 time=475 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=6 ttl=50 time=498 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=7 ttl=50 time=316 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=8 ttl=50 time=339 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=9 ttl=50 time=362 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=10 ttl=50 time=384 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=11 ttl=50 time=405 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=12 ttl=50 time=429 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=13 ttl=50 time=451 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=14 ttl=50 time=474 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=15 ttl=50 time=497 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=16 ttl=50 time=315 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=17 ttl=50 time=269 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=18 ttl=50 time=360 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=19 ttl=50 time=385 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=20 ttl=50 time=405 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=21 ttl=50 time=428 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=22 ttl=50 time=450 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=23 ttl=50 time=473 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=24 ttl=50 time=577 ms
+64 bytes from media-router-fp73.prod.media.vip.ne1.yahoo.com (74.6.231.20): icmp_seq=25 ttl=50 time=312 ms
+
+--- yahoo.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24036ms
+rtt min/avg/max/mdev = 269.189/414.835/592.388/81.816 ms
+PING instagram.com (3.220.83.93) 56(84) bytes of data.
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=1 ttl=224 time=352 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=2 ttl=224 time=675 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=3 ttl=224 time=494 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=4 ttl=224 time=516 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=5 ttl=224 time=541 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=6 ttl=224 time=360 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=7 ttl=224 time=384 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=8 ttl=224 time=407 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=9 ttl=224 time=430 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=10 ttl=224 time=316 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=11 ttl=224 time=312 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=12 ttl=224 time=296 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=13 ttl=224 time=320 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=14 ttl=224 time=344 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=15 ttl=224 time=368 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=16 ttl=224 time=392 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=17 ttl=224 time=416 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=18 ttl=224 time=439 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=19 ttl=224 time=461 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=20 ttl=224 time=484 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=21 ttl=224 time=507 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=22 ttl=224 time=504 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=23 ttl=224 time=349 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=24 ttl=224 time=373 ms
+64 bytes from ec2-3-220-83-93.compute-1.amazonaws.com (3.220.83.93): icmp_seq=25 ttl=224 time=367 ms
+
+--- instagram.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24007ms
+rtt min/avg/max/mdev = 296.026/416.286/674.694/87.494 ms
+PING youtube.com (172.217.166.46) 56(84) bytes of data.
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=1 ttl=116 time=71.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=2 ttl=116 time=96.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=3 ttl=116 time=62.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=4 ttl=116 time=72.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=5 ttl=116 time=95.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=6 ttl=116 time=98.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=7 ttl=116 time=98.3 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=8 ttl=116 time=82.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=9 ttl=116 time=72.6 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=10 ttl=116 time=70.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=11 ttl=116 time=87.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=12 ttl=116 time=65.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=13 ttl=116 time=84.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=14 ttl=116 time=182 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=15 ttl=116 time=93.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=16 ttl=116 time=65.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=17 ttl=116 time=92.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=18 ttl=116 time=82.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=19 ttl=116 time=68.4 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=20 ttl=116 time=87.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=21 ttl=116 time=88.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=22 ttl=116 time=86.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=23 ttl=116 time=90.6 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=24 ttl=116 time=96.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=25 ttl=116 time=320 ms
+
+--- youtube.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24041ms
+rtt min/avg/max/mdev = 62.112/96.388/320.104/50.865 ms
+PING bing.com (13.107.21.200) 56(84) bytes of data.
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=117 time=55.1 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=117 time=35.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=117 time=91.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=4 ttl=117 time=71.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=5 ttl=117 time=57.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=6 ttl=117 time=45.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=7 ttl=117 time=43.7 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=8 ttl=117 time=42.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=9 ttl=117 time=59.7 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=10 ttl=117 time=56.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=11 ttl=117 time=59.6 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=12 ttl=117 time=52.7 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=13 ttl=117 time=50.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=14 ttl=117 time=74.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=15 ttl=117 time=47.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=16 ttl=117 time=46.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=17 ttl=117 time=44.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=18 ttl=117 time=62.7 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=19 ttl=117 time=39.2 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=20 ttl=117 time=67.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=21 ttl=117 time=52.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=22 ttl=117 time=53.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=23 ttl=117 time=51.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=24 ttl=117 time=68.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=25 ttl=117 time=66.0 ms
+
+--- bing.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 28163ms
+rtt min/avg/max/mdev = 35.860/55.894/91.010/12.311 ms
+
+
+
+Varying packet sizes for host facebook
+
+
+PING facebook.com (157.240.192.35) 64(92) bytes of data.
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=1 ttl=54 time=50.0 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=2 ttl=54 time=79.2 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=3 ttl=54 time=95.1 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=4 ttl=54 time=97.9 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=5 ttl=54 time=171 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=6 ttl=54 time=73.2 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=7 ttl=54 time=73.9 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=8 ttl=54 time=63.3 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=9 ttl=54 time=83.5 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=10 ttl=54 time=79.6 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=11 ttl=54 time=68.1 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=12 ttl=54 time=72.8 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=13 ttl=54 time=52.0 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=14 ttl=54 time=66.7 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=15 ttl=54 time=85.7 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=16 ttl=54 time=62.6 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=17 ttl=54 time=73.8 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=18 ttl=54 time=63.4 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=19 ttl=54 time=78.5 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=20 ttl=54 time=78.4 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=21 ttl=54 time=76.8 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=22 ttl=54 time=75.7 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=23 ttl=54 time=74.1 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=24 ttl=54 time=68.9 ms
+72 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=25 ttl=54 time=79.4 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24042ms
+rtt min/avg/max/mdev = 50.004/77.735/170.993/21.884 ms
+PING facebook.com (157.240.192.35) 128(156) bytes of data.
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=1 ttl=54 time=117 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=2 ttl=54 time=67.6 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=3 ttl=54 time=79.0 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=4 ttl=54 time=71.6 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=5 ttl=54 time=90.7 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=6 ttl=54 time=78.1 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=7 ttl=54 time=67.2 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=8 ttl=54 time=84.4 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=9 ttl=54 time=84.8 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=10 ttl=54 time=82.8 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=11 ttl=54 time=96.8 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=12 ttl=54 time=86.3 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=13 ttl=54 time=74.2 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=14 ttl=54 time=71.7 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=15 ttl=54 time=83.4 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=16 ttl=54 time=85.4 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=17 ttl=54 time=65.1 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=18 ttl=54 time=87.5 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=19 ttl=54 time=82.5 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=20 ttl=54 time=79.5 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=21 ttl=54 time=79.1 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=22 ttl=54 time=66.9 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=23 ttl=54 time=86.8 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=24 ttl=54 time=65.5 ms
+136 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=25 ttl=54 time=96.2 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24041ms
+rtt min/avg/max/mdev = 65.104/81.201/116.904/11.537 ms
+PING facebook.com (157.240.16.35) 256(284) bytes of data.
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=59.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=57.9 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=81.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=88.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=97.5 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=101 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=93.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=82.5 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=291 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=65.0 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=90.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=86.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=80.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=143 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=67.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=188 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=312 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=88.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=73.7 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=71.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=83.3 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=70.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=93.2 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=52.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=55.8 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24037ms
+rtt min/avg/max/mdev = 52.436/103.043/312.253/64.929 ms
+PING facebook.com (157.240.16.35) 512(540) bytes of data.
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=149 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=411 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=98.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=67.6 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=70.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=68.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=62.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=75.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=63.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=60.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=49.7 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=99.6 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=97.1 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=128 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=69.1 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=66.1 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=114 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=82.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=135 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=87.6 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=180 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=84.7 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=223 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=80.3 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=268 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24043ms
+rtt min/avg/max/mdev = 49.664/115.607/410.718/79.555 ms
+PING facebook.com (157.240.16.35) 1024(1052) bytes of data.
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=438 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=101 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=94.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=135 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=79.2 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=79.8 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=66.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=66.2 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=104 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=81.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=187 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=88.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=232 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=55.3 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=58.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=105 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=109 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=92.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=137 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=167 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=93.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=45.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=84.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=76.9 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=191 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24042ms
+rtt min/avg/max/mdev = 45.447/118.751/438.243/79.367 ms
+PING facebook.com (157.240.192.35) 2048(2076) bytes of data.
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 0 received, 100% packet loss, time 24569ms
+
+PING facebook.com (157.240.192.35) 2048(2076) bytes of data.
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 0 received, 100% packet loss, time 24566ms
+
+
+
+
+
+
+Thursday 12am 
+PING facebook.com (157.240.192.35) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=1 ttl=54 time=61.5 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=2 ttl=54 time=68.7 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=3 ttl=54 time=67.9 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=4 ttl=54 time=65.6 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=5 ttl=54 time=81.3 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=6 ttl=54 time=77.2 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=7 ttl=54 time=62.1 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=8 ttl=54 time=60.1 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=9 ttl=54 time=67.6 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=10 ttl=54 time=64.0 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=11 ttl=54 time=65.9 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=12 ttl=54 time=68.2 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=13 ttl=54 time=54.4 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=14 ttl=54 time=65.0 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=15 ttl=54 time=63.2 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=16 ttl=54 time=51.3 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=17 ttl=54 time=61.8 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=18 ttl=54 time=63.7 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=19 ttl=54 time=68.2 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=20 ttl=54 time=56.3 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=21 ttl=54 time=48.6 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=22 ttl=54 time=64.8 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=23 ttl=54 time=67.0 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=24 ttl=54 time=55.9 ms
+64 bytes from edge-star-mini-shv-02-maa2.facebook.com (157.240.192.35): icmp_seq=25 ttl=54 time=53.0 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24039ms
+rtt min/avg/max/mdev = 48.574/63.333/81.319/7.302 ms
+PING google.com (142.250.67.142) 56(84) bytes of data.
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=1 ttl=116 time=48.2 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=2 ttl=116 time=48.1 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=3 ttl=116 time=46.2 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=4 ttl=116 time=45.6 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=5 ttl=116 time=40.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=6 ttl=116 time=60.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=7 ttl=116 time=39.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=8 ttl=116 time=59.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=9 ttl=116 time=50.9 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=10 ttl=116 time=38.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=11 ttl=116 time=37.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=12 ttl=116 time=53.6 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=13 ttl=116 time=45.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=14 ttl=116 time=46.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=15 ttl=116 time=44.5 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=16 ttl=116 time=65.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=17 ttl=116 time=43.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=18 ttl=116 time=57.1 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=19 ttl=116 time=80.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=20 ttl=116 time=77.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=21 ttl=116 time=76.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=22 ttl=116 time=56.5 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=23 ttl=116 time=46.9 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=24 ttl=116 time=43.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=25 ttl=116 time=62.7 ms
+
+--- google.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24039ms
+rtt min/avg/max/mdev = 37.766/52.577/80.254/11.990 ms
+PING yahoo.com (74.6.231.21) 56(84) bytes of data.
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=1 ttl=50 time=321 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=2 ttl=50 time=345 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=3 ttl=50 time=369 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=4 ttl=50 time=598 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=5 ttl=50 time=418 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=6 ttl=50 time=281 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=7 ttl=50 time=468 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=8 ttl=50 time=490 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=9 ttl=50 time=514 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=10 ttl=50 time=538 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=11 ttl=50 time=357 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=12 ttl=50 time=382 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=13 ttl=50 time=406 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=14 ttl=50 time=430 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=15 ttl=50 time=304 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=16 ttl=50 time=283 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=17 ttl=50 time=503 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=18 ttl=50 time=323 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=19 ttl=50 time=346 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=20 ttl=50 time=371 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=21 ttl=50 time=396 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=22 ttl=50 time=270 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=23 ttl=50 time=342 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=24 ttl=50 time=469 ms
+64 bytes from media-router-fp74.prod.media.vip.ne1.yahoo.com (74.6.231.21): icmp_seq=25 ttl=50 time=494 ms
+
+--- yahoo.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24003ms
+rtt min/avg/max/mdev = 270.034/400.602/597.799/86.889 ms
+PING bing.com (13.107.21.200) 56(84) bytes of data.
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=117 time=38.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=117 time=49.1 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=117 time=37.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=4 ttl=117 time=48.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=5 ttl=117 time=47.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=6 ttl=117 time=46.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=7 ttl=117 time=42.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=8 ttl=117 time=51.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=9 ttl=117 time=39.6 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=10 ttl=117 time=56.2 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=11 ttl=117 time=48.2 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=12 ttl=117 time=57.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=13 ttl=117 time=54.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=14 ttl=117 time=45.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=15 ttl=117 time=34.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=16 ttl=117 time=43.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=17 ttl=117 time=42.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=18 ttl=117 time=41.6 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=19 ttl=117 time=50.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=20 ttl=117 time=47.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=21 ttl=117 time=48.2 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=22 ttl=117 time=46.6 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=23 ttl=117 time=46.1 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=24 ttl=117 time=45.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=25 ttl=117 time=44.8 ms
+
+--- bing.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24032ms
+rtt min/avg/max/mdev = 34.432/46.054/57.028/5.463 ms
+PING youtube.com (172.217.166.46) 56(84) bytes of data.
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=1 ttl=116 time=79.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=2 ttl=116 time=60.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=3 ttl=116 time=95.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=4 ttl=116 time=65.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=5 ttl=116 time=63.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=6 ttl=116 time=69.0 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=7 ttl=116 time=60.3 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=8 ttl=116 time=59.4 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=9 ttl=116 time=65.7 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=10 ttl=116 time=81.4 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=11 ttl=116 time=64.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=12 ttl=116 time=63.2 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=13 ttl=116 time=62.0 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=14 ttl=116 time=60.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=15 ttl=116 time=71.0 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=16 ttl=116 time=72.7 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=17 ttl=116 time=71.6 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=18 ttl=116 time=69.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=19 ttl=116 time=59.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=20 ttl=116 time=66.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=21 ttl=116 time=67.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=22 ttl=116 time=63.7 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=23 ttl=116 time=64.3 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=24 ttl=116 time=68.7 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=25 ttl=116 time=65.0 ms
+
+--- youtube.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24041ms
+rtt min/avg/max/mdev = 59.366/67.696/95.247/7.926 ms
+PING instagram.com (34.226.75.20) 56(84) bytes of data.
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=1 ttl=222 time=540 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=2 ttl=222 time=409 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=3 ttl=222 time=431 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=4 ttl=222 time=455 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=5 ttl=222 time=479 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=6 ttl=222 time=307 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=7 ttl=222 time=525 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=8 ttl=222 time=322 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=9 ttl=222 time=366 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=10 ttl=222 time=321 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=11 ttl=222 time=327 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=12 ttl=222 time=440 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=13 ttl=222 time=461 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=14 ttl=222 time=342 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=15 ttl=222 time=317 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=16 ttl=222 time=531 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=17 ttl=222 time=319 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=18 ttl=222 time=371 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=19 ttl=222 time=394 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=20 ttl=222 time=418 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=21 ttl=222 time=316 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=22 ttl=222 time=464 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=24 ttl=222 time=509 ms
+64 bytes from ec2-34-226-75-20.compute-1.amazonaws.com (34.226.75.20): icmp_seq=25 ttl=222 time=531 ms
+
+--- instagram.com ping statistics ---
+25 packets transmitted, 24 received, 4% packet loss, time 25398ms
+rtt min/avg/max/mdev = 307.187/412.308/540.072/79.081 ms
+PING facebook.com (157.240.16.35) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=38.2 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=57.5 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=73.2 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=81.7 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=67.6 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=62.0 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=38.7 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=57.2 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=63.5 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=92.0 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=67.7 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=86.9 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=51.3 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=65.7 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=39.9 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=62.8 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=70.6 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=91.1 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=64.3 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=54.8 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=33.5 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=57.2 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=59.9 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=44.4 ms
+64 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=71.7 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24042ms
+rtt min/avg/max/mdev = 33.478/62.132/91.986/15.615 ms
+PING google.com (142.250.67.142) 56(84) bytes of data.
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=1 ttl=116 time=38.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=2 ttl=116 time=48.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=3 ttl=116 time=57.2 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=4 ttl=116 time=77.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=5 ttl=116 time=56.1 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=6 ttl=116 time=54.5 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=7 ttl=116 time=53.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=8 ttl=116 time=52.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=9 ttl=116 time=51.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=10 ttl=116 time=59.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=11 ttl=116 time=68.4 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=12 ttl=116 time=47.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=13 ttl=116 time=45.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=14 ttl=116 time=46.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=15 ttl=116 time=46.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=16 ttl=116 time=68.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=17 ttl=116 time=48.5 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=18 ttl=116 time=77.1 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=19 ttl=116 time=65.8 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=20 ttl=116 time=59.7 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=21 ttl=116 time=43.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=22 ttl=116 time=56.3 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=23 ttl=116 time=46.0 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=24 ttl=116 time=57.2 ms
+64 bytes from bom12s06-in-f14.1e100.net (142.250.67.142): icmp_seq=25 ttl=116 time=40.1 ms
+
+--- google.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24039ms
+rtt min/avg/max/mdev = 38.718/54.574/77.062/10.280 ms
+PING yahoo.com (74.6.143.25) 56(84) bytes of data.
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=1 ttl=51 time=253 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=2 ttl=51 time=467 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=3 ttl=51 time=286 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=4 ttl=51 time=308 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=5 ttl=51 time=330 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=6 ttl=51 time=557 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=7 ttl=51 time=277 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=8 ttl=51 time=285 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=9 ttl=51 time=275 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=10 ttl=51 time=288 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=11 ttl=51 time=295 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=12 ttl=51 time=330 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=13 ttl=51 time=273 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=14 ttl=51 time=299 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=15 ttl=51 time=421 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=16 ttl=51 time=454 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=17 ttl=51 time=482 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=18 ttl=51 time=303 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=19 ttl=51 time=331 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=20 ttl=51 time=343 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=21 ttl=51 time=272 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=22 ttl=51 time=335 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=23 ttl=51 time=435 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=24 ttl=51 time=459 ms
+64 bytes from media-router-fp73.prod.media.vip.bf1.yahoo.com (74.6.143.25): icmp_seq=25 ttl=51 time=467 ms
+
+--- yahoo.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24014ms
+rtt min/avg/max/mdev = 252.846/352.924/556.936/84.346 ms
+PING bing.com (13.107.21.200) 56(84) bytes of data.
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=117 time=37.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=117 time=40.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=117 time=40.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=4 ttl=117 time=43.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=5 ttl=117 time=56.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=6 ttl=117 time=53.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=7 ttl=117 time=43.2 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=8 ttl=117 time=42.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=9 ttl=117 time=80.6 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=10 ttl=117 time=53.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=11 ttl=117 time=38.5 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=12 ttl=117 time=76.9 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=13 ttl=117 time=79.1 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=14 ttl=117 time=75.7 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=15 ttl=117 time=75.2 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=16 ttl=117 time=54.1 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=17 ttl=117 time=72.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=18 ttl=117 time=65.1 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=19 ttl=117 time=65.3 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=20 ttl=117 time=61.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=21 ttl=117 time=62.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=22 ttl=117 time=71.4 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=23 ttl=117 time=59.8 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=24 ttl=117 time=60.0 ms
+64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=25 ttl=117 time=58.9 ms
+
+--- bing.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24045ms
+rtt min/avg/max/mdev = 37.320/58.732/80.597/13.565 ms
+PING youtube.com (172.217.166.46) 56(84) bytes of data.
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=1 ttl=116 time=66.3 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=2 ttl=116 time=204 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=3 ttl=116 time=103 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=4 ttl=116 time=99.3 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=5 ttl=116 time=157 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=6 ttl=116 time=151 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=7 ttl=116 time=231 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=8 ttl=116 time=93.1 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=9 ttl=116 time=93.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=10 ttl=116 time=81.3 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=11 ttl=116 time=88.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=12 ttl=116 time=97.9 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=13 ttl=116 time=118 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=14 ttl=116 time=86.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=15 ttl=116 time=86.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=16 ttl=116 time=84.7 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=17 ttl=116 time=82.4 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=18 ttl=116 time=92.4 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=19 ttl=116 time=79.5 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=20 ttl=116 time=77.0 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=21 ttl=116 time=75.8 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=22 ttl=116 time=144 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=23 ttl=116 time=155 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=24 ttl=116 time=140 ms
+64 bytes from bom07s18-in-f14.1e100.net (172.217.166.46): icmp_seq=25 ttl=116 time=70.1 ms
+
+--- youtube.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24032ms
+rtt min/avg/max/mdev = 66.347/110.378/230.877/41.524 ms
+PING instagram.com (3.214.207.247) 56(84) bytes of data.
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=1 ttl=224 time=302 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=2 ttl=224 time=297 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=3 ttl=224 time=294 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=4 ttl=224 time=473 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=5 ttl=224 time=278 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=6 ttl=224 time=313 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=7 ttl=224 time=541 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=8 ttl=224 time=360 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=9 ttl=224 time=383 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=10 ttl=224 time=307 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=11 ttl=224 time=325 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=12 ttl=224 time=309 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=13 ttl=224 time=289 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=14 ttl=224 time=306 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=15 ttl=224 time=418 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=16 ttl=224 time=319 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=17 ttl=224 time=364 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=18 ttl=224 time=381 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=19 ttl=224 time=403 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=20 ttl=224 time=337 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=21 ttl=224 time=1469 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=22 ttl=224 time=1843 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=23 ttl=224 time=949 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=24 ttl=224 time=1459 ms
+64 bytes from ec2-3-214-207-247.compute-1.amazonaws.com (3.214.207.247): icmp_seq=25 ttl=224 time=1706 ms
+
+--- instagram.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24534ms
+rtt min/avg/max/mdev = 278.353/577.144/1843.014/477.829 ms, pipe 2
+PING facebook.com (157.240.16.35) 64(92) bytes of data.
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=54.7 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=54.0 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=72.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=50.6 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=58.7 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=76.0 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=237 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=45.6 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=56.9 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=67.6 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=50.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=47.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=45.9 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=86.7 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=85.0 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=82.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=52.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=81.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=76.4 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=68.7 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=67.0 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=70.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=70.8 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=68.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=50.4 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24036ms
+rtt min/avg/max/mdev = 45.617/71.043/237.056/36.169 ms
+PING facebook.com (157.240.16.35) 128(156) bytes of data.
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=57.7 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=65.7 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=54.5 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=74.7 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=79.2 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=79.6 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=76.8 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=55.4 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=54.5 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=80.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=50.2 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=62.9 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=66.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=67.2 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=80.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=65.4 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=64.9 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=62.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=51.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=68.7 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=77.5 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=53.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=66.2 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=81.8 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=63.5 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24037ms
+rtt min/avg/max/mdev = 50.196/66.364/81.802/9.867 ms
+PING facebook.com (157.240.16.35) 256(284) bytes of data.
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=97.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=83.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=73.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=71.3 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=73.9 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=81.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=84.7 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=77.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=76.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=73.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=50.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=59.0 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=132 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=66.2 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=66.5 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=106 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=253 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=131 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=178 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=96.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=96.5 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=94.0 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=92.0 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=102 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=89.0 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24036ms
+rtt min/avg/max/mdev = 50.353/96.225/252.695/41.271 ms
+PING facebook.com (157.240.16.35) 512(540) bytes of data.
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=73.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=74.7 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=78.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=79.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=70.6 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=59.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=81.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=69.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=72.1 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=73.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=114 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=112 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=82.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=59.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=68.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=64.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=76.3 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=79.7 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=77.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=108 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=69.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=76.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=54.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=75.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=73.6 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24007ms
+rtt min/avg/max/mdev = 54.864/76.947/114.239/14.347 ms
+PING facebook.com (157.240.16.35) 1024(1052) bytes of data.
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=79.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=77.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=77.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=71.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=79.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=56.3 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=74.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=79.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=69.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=60.3 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=99.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=97.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=53.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=69.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=55.9 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=82.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=67.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=69.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=73.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=103 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=70.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=64.0 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=66.3 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=77.8 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=60.6 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24039ms
+rtt min/avg/max/mdev = 53.695/73.489/103.132/12.596 ms
+PING facebook.com (157.240.16.35) 64(92) bytes of data.
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=44.8 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=52.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=60.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=49.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=49.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=47.9 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=67.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=54.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=71.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=50.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=78.0 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=58.7 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=74.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=76.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=76.4 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=73.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=77.4 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=65.9 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=52.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=60.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=47.8 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=74.8 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=66.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=66.8 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=64.1 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24030ms
+rtt min/avg/max/mdev = 44.830/62.408/78.044/10.844 ms
+PING facebook.com (157.240.16.35) 128(156) bytes of data.
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=45.8 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=53.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=61.8 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=94.2 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=92.6 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=48.8 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=55.6 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=45.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=65.8 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=62.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=53.4 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=50.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=56.5 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=79.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=75.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=73.9 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=61.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=49.9 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=51.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=47.7 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=45.6 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=50.6 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=52.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=61.0 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=55.8 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24036ms
+rtt min/avg/max/mdev = 44.987/59.516/94.171/13.476 ms
+PING facebook.com (157.240.16.35) 256(284) bytes of data.
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=46.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=64.7 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=52.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=84.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=79.9 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=79.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=44.4 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=61.3 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=61.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=65.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=60.1 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=58.3 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=58.3 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=65.5 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=64.5 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=62.7 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=59.9 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=58.2 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=58.7 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=55.2 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=65.8 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=54.6 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=70.0 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=91.0 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=97.1 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24037ms
+rtt min/avg/max/mdev = 44.446/64.799/97.109/12.560 ms
+PING facebook.com (157.240.16.35) 512(540) bytes of data.
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=86.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=70.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=85.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=85.3 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=70.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=56.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=54.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=55.7 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=70.1 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=53.5 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=73.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=71.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=71.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=71.6 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=67.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=53.9 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=52.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=61.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=58.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=50.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=101 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=57.0 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=97.2 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=60.7 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=54.8 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24034ms
+rtt min/avg/max/mdev = 50.775/67.634/100.554/13.895 ms
+PING facebook.com (157.240.16.35) 1024(1052) bytes of data.
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=86.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=58.3 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=54.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=194 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=51.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=59.9 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=50.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=88.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=88.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=69.1 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=73.0 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=59.2 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=58.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=56.8 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=54.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=52.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=72.8 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=71.4 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=72.5 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=56.6 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=65.7 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=53.2 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=62.9 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=63.8 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=66.0 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24038ms
+rtt min/avg/max/mdev = 50.604/69.631/194.151/27.654 ms
+PING facebook.com (157.240.16.35) 64(92) bytes of data.
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=513 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=87.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=45.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=49.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=60.6 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=55.0 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=46.5 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=147 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=60.8 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=53.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=39.3 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=181 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=164 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=72.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=110 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=83.9 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=80.2 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=44.1 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=231 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=554 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=462 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=122 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=64.4 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=400 ms
+72 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=309 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24113ms
+rtt min/avg/max/mdev = 39.329/161.361/554.032/155.316 ms
+PING facebook.com (157.240.16.35) 128(156) bytes of data.
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=441 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=810 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=364 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=57.3 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=257 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=86.4 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=118 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=203 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=406 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=857 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=1654 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=1695 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=1021 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=1576 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=1541 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=1639 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=1105 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=746 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=883 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=713 ms
+136 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=1470 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 21 received, 16% packet loss, time 24144ms
+rtt min/avg/max/mdev = 57.294/840.119/1695.460/561.274 ms, pipe 2
+PING facebook.com (157.240.16.35) 256(284) bytes of data.
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=966 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=826 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=1092 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=1329 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=1330 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=1598 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=1777 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=1374 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=1057 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=2010 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=1284 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=1455 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=1085 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=1925 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=1191 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=1277 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=1115 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=1194 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=1376 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=1083 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=997 ms
+264 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=1354 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 22 received, 12% packet loss, time 24141ms
+rtt min/avg/max/mdev = 826.101/1304.357/2010.319/296.414 ms, pipe 3
+PING facebook.com (157.240.16.35) 512(540) bytes of data.
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=206 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=62.6 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=205 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=192 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=56.3 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=65.8 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=652 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=637 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=731 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=386 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=550 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=786 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=778 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=696 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=506 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=463 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=288 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=18 ttl=55 time=360 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=232 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=760 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=448 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=727 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=614 ms
+520 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=277 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 24 received, 4% packet loss, time 24113ms
+rtt min/avg/max/mdev = 56.311/444.973/785.600/241.789 ms
+PING facebook.com (157.240.16.35) 1024(1052) bytes of data.
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=1 ttl=55 time=358 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=2 ttl=55 time=745 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=3 ttl=55 time=800 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=4 ttl=55 time=650 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=5 ttl=55 time=325 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=6 ttl=55 time=395 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=7 ttl=55 time=703 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=8 ttl=55 time=474 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=9 ttl=55 time=433 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=10 ttl=55 time=631 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=11 ttl=55 time=347 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=12 ttl=55 time=388 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=13 ttl=55 time=467 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=14 ttl=55 time=669 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=15 ttl=55 time=705 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=16 ttl=55 time=810 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=17 ttl=55 time=825 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=19 ttl=55 time=754 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=20 ttl=55 time=800 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=21 ttl=55 time=789 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=22 ttl=55 time=721 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=23 ttl=55 time=193 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=24 ttl=55 time=339 ms
+1032 bytes from edge-star-mini-shv-01-bom1.facebook.com (157.240.16.35): icmp_seq=25 ttl=55 time=535 ms
+
+--- facebook.com ping statistics ---
+25 packets transmitted, 24 received, 4% packet loss, time 24149ms
+rtt min/avg/max/mdev = 193.372/577.254/824.524/190.574 ms
