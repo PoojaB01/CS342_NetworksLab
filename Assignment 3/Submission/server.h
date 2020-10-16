@@ -7,6 +7,8 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <dirent.h> 
+#include <stdio.h>
+#include <string.h>
 
 #define DSK "./server_dir/"
 
