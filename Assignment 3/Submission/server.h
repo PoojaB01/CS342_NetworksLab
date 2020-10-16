@@ -6,6 +6,9 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <arpa/inet.h>
+#include <dirent.h> 
+
+#define DSK "./server_dir/"
 
 int setup_server(char *port);
 int send_file(int sockfd, char *filename);

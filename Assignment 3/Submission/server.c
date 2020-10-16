@@ -57,6 +57,135 @@ int setup_server(char *port)
 	return servfd;
 }
 
+int send_file(int sockfd, char *filename)
+{
+	char filepath[256];
+	bzero(filepath, 256);
+	strcpy(filepath, DSK);
+	strcat(filepath, filename);
+	
+	FILE *fd = fopen(filepath, "r");
+	
+	char buffer[1024];
+	
+	if(fd == NULL)
+	{
+		bzero(buffer, 1024);
+		sprintf(buffer, "%s not found.", filename);
+		write(sockfd, buffer, strlen(buffer));
+		return -1;
+	}
+	write(sockfd, "OK", 2);
+	
+	bzero(buffer, 1024);
+	read(sockfd, buffer, 1024);
+	if(strcmp("OK", buffer) != 0)
+	{
+		write(sockfd, "ABORT", 5);
+		fclose(fd);
+		return -1;
+	}
+	
+	int size;
+	do {
+		bzero(buffer, 1024);
+		size = fread(buffer, sizeof(char), 1024, fd);
+		write(sockfd, buffer, size);
+	} while(size == 1024);
+	
+	fclose(fd);
+
+	return 0;
+}
+
+int fetch_file(int sockfd, char *filename)
+{
+	char buffer[1024];
+	bzero(buffer, 1024);
+	write(sockfd, "OK", 2);
+	read(sockfd, buffer, 1024);
+	if(strcmp(buffer, "OK") != 0)
+	{
+		write(sockfd, "ABORT", 5);
+		return -1;
+	}
+	char filepath[256];
+	bzero(filepath, 256);
+	strcpy(filepath, DSK);
+	strcat(filepath, filename);
+	
+	FILE *fd = fopen(filepath, "r");
+	print(filepath);
+	if(fd != NULL)
+	{
+		print("file opened.");
+		write(sockfd, "EXIST", 5);
+		
+		bzero(buffer, 1024);
+		read(sockfd, buffer, 1024);
+		
+		if(strcmp(buffer, "ABORT") == 0)
+		{
+			write(sockfd, "ABORT", 5);
+			fclose(fd);
+			return -1;
+		}
+	}
+	
+	
+	fd = fopen(filepath, "w");
+	
+	if(fd == NULL)
+	{
+		write(sockfd, "ABORT", 5);
+		return -1;
+	}
+	
+	write(sockfd, "OK", 2);
+	
+	while(1)
+	{
+		bzero(buffer, 1024);
+		read(sockfd, buffer, 1024);
+		fwrite(buffer, sizeof(char), strlen(buffer), fd);
+		if(strlen(buffer) < 1024)
+			break;
+	}
+	
+	fclose(fd);
+	
+	write(sockfd, "OK", 2);
+			
+	
+	return 0;
+}
+
+int ls(int sockfd)
+{
+	int count = 0; 
+	DIR *di;
+	struct dirent *dir;
+	di = opendir(DSK);
+	char buffer[32];
+	while ((dir = readdir(di)) != NULL) {
+		write(sockfd, dir->d_name, strlen(dir->d_name));
+		bzero(buffer, 32);
+		read(sockfd, buffer, 32);
+		if(strcmp("OK", buffer) != 0)
+		{
+			print("ERROR");
+			break;
+		}
+		count++;
+	}
+	write(sockfd, "DONE", 4);
+	bzero(buffer, 32);
+	read(sockfd, buffer, 32);
+	bzero(buffer, 32);
+	sprintf(buffer, "%d files.", count);
+	write(sockfd, buffer, strlen(buffer));
+	return 0;
+}
 int main(int argc, char *argv[])
 {
 	if(argc != 2)
@@ -91,14 +220,14 @@ int main(int argc, char *argv[])
 			write(clifd, "OK", 2);
 			bzero(buffer, 1000);
 			read(clifd, buffer, 1000);
-			write(clifd, "I will send a file.", 19);
+			send_file(clifd, buffer);
 		}
 		else if(strcmp("PUT", buffer) == 0)
 		{
 			write(clifd, "OK", 2);
 			bzero(buffer, 1000);
 			read(clifd, buffer, 1000);
-			write(clifd, "I will fetch a file.", 20);
+			fetch_file(clifd, buffer);
 		}
 		else if(strcmp("MGET", buffer) == 0)
 		{
@@ -116,7 +245,7 @@ int main(int argc, char *argv[])
 		}
 		else if(strcmp("ls", buffer) == 0)
 		{
-			write(clifd, "I will send file names.", 23);
+			ls(clifd);
 		}
 		else {
 			write(clifd, "ERROR", 5);

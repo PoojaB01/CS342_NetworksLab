@@ -59,137 +59,13 @@ int connect_to_server(char *ip, char *port)
 	return sockfd;	
 }
 
-int send_file(int sockfd, char *filename)
+int send_file(int sockfd, char *fiøÔd¸…pã¥ªlename)
 {
-	char filepath[256];
-	bzero(filepath, 256);
-	strcpy(filepath, DSK);
-	strcat(filepath, filename);
-	
-	FILE *fd = fopen(filepath, "r");
-	
-	char buffer[1024];
-	
-	read(sockfd, buffer, 1024);
-		
-	if(fd == NULL)
-	{
-		write(sockfd, "ABORT", 5);
-		read(sockfd, buffer, 1024);
-		print("File does not exist.");
-		return -1;
-	}
-	
-	write(sockfd, "OK", 2);
-	
-	bzero(buffer, 1024);
-	read(sockfd, buffer, 1024);
-	
-	if(strcmp(buffer, "EXIST") == 0)
-	{
-		bzero(buffer, 1024);
-		sprintf(buffer, "%s already exists on the server. Do you want to overwrite? (Y / N)", filename);
-		print(buffer);
-		
-		bzero(buffer, 1024);
-		fgets(buffer, 1024, stdin);
-		if(buffer[0] != 'Y')
-		{
-			write(sockfd, "ABORT", 5);
-			read(sockfd, buffer, 1024);
-			print("Aborting.");
-			fclose(fd);
-			return -1;
-		}
-		else {
-			write(sockfd, "OK", 2);
-			bzero(buffer, 1024);
-			read(sockfd, buffer, 1024);
-		}
-	}
-	
-	if(strcmp(buffer, "OK") != 0)
-	{
-		print("Error creating file on server.");
-		fclose(fd);
-		return -1;
-	}
-	
-	int size;
-	do {
-		bzero(buffer, 1024);
-		size = fread(buffer, sizeof(char), 1024, fd);
-		write(sockfd, buffer, size);
-	} while(size == 1024);
-	
-	read(sockfd, buffer, 1024);
-
-	fclose(fd);
-		
-	bzero(buffer, 1024);
-	sprintf(buffer, "Successfully sent file %s.", filename);
-	print(buffer);
-	
 	return 0;
 }
 
 int fetch_file(int sockfd, char *filename)
 {
-	char buffer[1024];
-	bzero(buffer, 1024);
-	read(sockfd, buffer, 1024);
-	if(strcmp("OK", buffer) != 0)
-	{
-		print(buffer);
-		return -1;
-	}
-	
-	char filepath[256];
-	bzero(filepath, 256);
-	strcpy(filepath, DSK);
-	strcat(filepath, filename);
-	
-	FILE *fd = fopen(filepath, "r");
-	
-	if(fd != NULL)
-	{
-		sprintf(buffer, "%s already exists. Do you want to overwrite? (Y / N)", filename);
-		print(buffer);
-		fgets(buffer, 1024, stdin);
-		if(buffer[0] != 'Y')
-		{
-			write(sockfd, "ABORT", 5);
-			read(sockfd, buffer, 1024);
-			print("Aborting.");
-			return -1;
-		}
-	}
-	
-	fd = fopen(filepath, "w");
-	
-	if(fd == NULL)
-	{
-		write(sockfd, "ABORT", 5);
-		read(sockfd, buffer, 1024);
-		print("Error creating file.");
-		return -1;
-	}
-	
-	write(sockfd, "OK", 1024);
-	
-	
-	while(1)
-	{
-		bzero(buffer, 1024);
-		read(sockfd, buffer, 1024);
-		fwrite(buffer, sizeof(char), strlen(buffer), fd);
-		if(strlen(buffer) < 1024)
-			break;
-	}
-	fclose(fd);
-	bzero(buffer, 1024);
-	sprintf(buffer, "Successfully recieved file %s.", filename);
-	print(buffer);
 	return 0;
 }
 
@@ -208,7 +84,7 @@ int ls(int sockfd)
 		
 		write(sockfd, "OK", 2);
 	}
-	write(sockfd, "OK", 2);
+	
 	bzero(buffer, 256);
 	read(sockfd, buffer, 256);
 	print(buffer);
@@ -257,14 +133,17 @@ int main(int argc, char *argv[])
 				
 				bzero(buffer, 1000);
 				read(sockfd, buffer, 1000);
-				if(strcmp("OK", buffer))
+				iøÔd¸…f(strpã¥ªcmp("OK", buffer))
 				{
 					print("ERROR");
 					continue;
 				}
 				write(sockfd, args[1], strlen(args[1]));
 				
-				fetch_file(sockfd, args[1]);
+				bzero(buffer, 1000);
+				read(sockfd, buffer, 1000);
+				
+				print(buffer);
 			}
 		}
 		else if(strcmp("PUT",args[0]) == 0)
@@ -285,7 +164,10 @@ int main(int argc, char *argv[])
 				}
 				write(sockfd, args[1], strlen(args[1]));
 				
-				send_file(sockfd, args[1]);
+				bzero(buffer, 1000);
+				read(sockfd, buffer, 1000);
+				
+				print(buffer);
 			}
 		}
 		else if(strcmp("MGET",args[0]) == 0)
@@ -307,7 +189,7 @@ int main(int argc, char *argv[])
 				write(sockfd, args[1], strlen(args[1]));
 				
 				bzero(buffer, 1000);
-				read(sockfd, buffer, 1000);
+			øÔd¸…	read(sockpã¥ªfd, buffer, 1000);
 				
 				print(buffer);
 			}
@@ -366,5 +248,9 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+int fetch_file(int sockfd, char *filename)
+{
+		
+}
 	
 	
