@@ -61,6 +61,8 @@ int connect_to_server(char *ip, char *port)
 
 
 
+
+
 int main(int argc, char *argv[])
 {
 	if(argc != 3)
@@ -71,15 +73,17 @@ int main(int argc, char *argv[])
 	int sockfd;
 	sockfd = connect_to_server(argv[1], argv[2]);
 	
-	printf("$ ");
-	
 	char command[1000], buffer[1000];
 	char *args[10];
+	
 	while(1)
 	{
 		bzero(command, 1000);
 		bzero(buffer, 1000);
+		
+		printf("$ ");
 		fgets(command, 1000, stdin);
+		
 		int cargs = break_line(command, args);
 		if(cargs == 0)
 		{
@@ -93,11 +97,22 @@ int main(int argc, char *argv[])
 			if(cargs != 2)
 			{
 				print("Invalid Syntax.");
-				printf("$ ");
 			}
 			else {
-				write(sockfd, command, strlen(command));
+				write(sockfd, args[0], strlen(args[0]));
+				
+				bzero(buffer, 1000);
 				read(sockfd, buffer, 1000);
+				if(strcmp("OK", buffer))
+				{
+					print("ERROR");
+					continue;
+				}
+				write(sockfd, args[1], strlen(args[1]));
+				
+				bzero(buffer, 1000);
+				read(sockfd, buffer, 1000);
+				
 				print(buffer);
 			}
 		}
@@ -106,11 +121,22 @@ int main(int argc, char *argv[])
 			if(cargs != 2)
 			{
 				print("Invalid Syntax.");
-				printf("$ ");
 			}
 			else {
-				write(sockfd, command, strlen(command));
+				write(sockfd, args[0], strlen(args[0]));
+				
+				bzero(buffer, 1000);
 				read(sockfd, buffer, 1000);
+				if(strcmp("OK", buffer))
+				{
+					print("ERROR");
+					continue;
+				}
+				write(sockfd, args[1], strlen(args[1]));
+				
+				bzero(buffer, 1000);
+				read(sockfd, buffer, 1000);
+				
 				print(buffer);
 			}
 		}
@@ -119,11 +145,22 @@ int main(int argc, char *argv[])
 			if(cargs != 2)
 			{
 				print("Invalid Syntax.");
-				printf("$ ");
 			}
 			else {
-				write(sockfd, command, strlen(command));
+				write(sockfd, args[0], strlen(args[0]));
+				
+				bzero(buffer, 1000);
 				read(sockfd, buffer, 1000);
+				if(strcmp("OK", buffer))
+				{
+					print("ERROR");
+					continue;
+				}
+				write(sockfd, args[1], strlen(args[1]));
+				
+				bzero(buffer, 1000);
+				read(sockfd, buffer, 1000);
+				
 				print(buffer);
 			}
 		}
@@ -132,11 +169,22 @@ int main(int argc, char *argv[])
 			if(cargs != 2)
 			{
 				print("Invalid Syntax.");
-				printf("$ ");
 			}
 			else {
-				write(sockfd, command, strlen(command));
+				write(sockfd, args[0], strlen(args[0]));
+				
+				bzero(buffer, 1000);
 				read(sockfd, buffer, 1000);
+				if(strcmp("OK", buffer))
+				{
+					print("ERROR");
+					continue;
+				}
+				write(sockfd, args[1], strlen(args[1]));
+				
+				bzero(buffer, 1000);
+				read(sockfd, buffer, 1000);
+				
 				print(buffer);
 			}
 		}
@@ -145,12 +193,12 @@ int main(int argc, char *argv[])
 			if(cargs != 1)
 			{
 				print("Invalid Syntax.");
-				printf("$ ");
 			}
 			else {
-				write(sockfd, command, strlen(command));
+				write(sockfd, args[0], strlen(args[0]));
 				read(sockfd, buffer, 1000);
-				print(buffer);
+				if(strcmp(buffer, "OK") == 0);
+
 			}
 		}
 		else if(strcmp("exit", args[0]) == 0)
@@ -158,18 +206,22 @@ int main(int argc, char *argv[])
 			if(cargs != 1)
 			{
 				print("Invalid Syntax.");
-				printf("$ ");
+
 			}
 			print("Adios amigo.");
 			break;
 		}
 		else {
 			print("Invalid Command.");
-			printf("$ ");
 		}
 	}
 	close(sockfd);
 	return 0;
+}
+
+int fetch_file(int sockfd, char *filename)
+{
+		
 }
 	
 	

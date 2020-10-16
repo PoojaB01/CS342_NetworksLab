@@ -12,6 +12,21 @@ void print(const char *msg)
 	printf("%s\n", msg);
 }
 
+int break_line(char *str, char *words[])
+{
+	str = strtok(str, "\n");
+	
+	int k = 0;
+	char *ptr = strtok(str, " ");
+	
+	while(ptr != NULL)
+	{
+		words[k++] = ptr;
+		ptr = strtok(NULL, " ");
+	}
+	return k;
+}
+
 int setup_server(char *port)
 {
 	int portno = atoi(port);
@@ -69,9 +84,49 @@ int main(int argc, char *argv[])
 	while(1)
 	{
 		bzero(buffer, 1000);
-		int n = read(clifd, buffer, 1000);
+		read(clifd, buffer, 1000);
 		print(buffer);
-		n = write(clifd, buffer, strlen(buffer));
+		if(strcmp("GET", buffer) == 0)
+		{
+			write(clifd, "OK", 2);
+			bzero(buffer, 1000);
+			read(clifd, buffer, 1000);
+			write(clifd, "I will send a file.", 19);
+		}
+		else if(strcmp("PUT", buffer) == 0)
+		{
+			write(clifd, "OK", 2);
+			bzero(buffer, 1000);
+			read(clifd, buffer, 1000);
+			write(clifd, "I will fetch a file.", 20);
+		}
+		else if(strcmp("MGET", buffer) == 0)
+		{
+			write(clifd, "OK", 2);
+			bzero(buffer, 1000);
+			read(clifd, buffer, 1000);
+			write(clifd, "I will send a files.", 20);
+		}
+		else if(strcmp("MPUT", buffer) == 0)
+		{
+			write(clifd, "OK", 2);
+			bzero(buffer, 1000);
+			read(clifd, buffer, 1000);
+			write(clifd, "I will fetch a files.", 21);
+		}
+		else if(strcmp("ls", buffer) == 0)
+		{
+			write(clifd, "I will send file names.", 23);
+		}
+		else {
+			write(clifd, "ERROR", 5);
+			continue;
+		}
 	}
 	return 0;
 }
+
+/* Assumption
+1. Read and write happens without error.
+2. 
+*/
