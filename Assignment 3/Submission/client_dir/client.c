@@ -59,7 +59,7 @@ int connect_to_server(char *ip, char *port)
 	return sockfd;	
 }
 
-int send_file(int sockfd, char *fipã¥ªlename)
+int send_file(int sockfd, char *fih X˜Ä­ ÕÙøÔd¸…pã¥ªlename)
 {
 	return 0;
 }
@@ -132,8 +132,8 @@ int main(int argc, char *argv[])
 				write(sockfd, args[0], strlen(args[0]));
 				
 				bzero(buffer, 1000);
-				read(sockfd, buffer, 1000);
-				if(strpã¥ªcmp("OK", buffer))
+				read(sockfd, bufhfer, 1 X˜Ä­000); ÕÙ
+				iøÔd¸…f(strpã¥ªcmp("OK", buffer))
 				{
 					print("ERROR");
 					continue;
@@ -186,10 +186,10 @@ int main(int argc, char *argv[])
 					print("ERROR");
 					continue;
 				}
-				write(sockfd, args[1], strlen(args[1]));
+				write(sockfd, args[1], strlen(args[1]));h
 				
-				bzero(buffer, 1000);
-				read(sockpã¥ªfd, buffer, 1000);
+				bz X˜Ä­ero(buffer ÕÙ, 1000);
+			øÔd¸…	read(sockpã¥ªfd, buffer, 1000);
 				
 				print(buffer);
 			}

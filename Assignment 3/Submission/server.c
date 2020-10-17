@@ -118,7 +118,6 @@ int fetch_file(int sockfd, char *filename)
 	print(filepath);
 	if(fd != NULL)
 	{
-		print("file opened.");
 		write(sockfd, "EXIST", 5);
 		
 		bzero(buffer, 1024);
@@ -187,148 +186,56 @@ int ls(int sockfd)
 	return 0;
 }
 
-int mput(int sockfd, char *s)
+int fetch_files_with_ext(int sockfd, char *extension)
 {
-    DIR *di;
-    char *filename;  //will store the filename
-    char *extension;  //will store the file extension
-    struct dirent *sample_dir;
-    int flag;
-    if(strcmp(s, "txt")==0)
-    {
-      flag= 0;
-    }
-    else if(strcmp(s,"c")==0)
-    {
-      flag= 1;
-    }
-    else 
-    {
-      printf("Incorrect extension\n");
-      return -1;
-    }
-    di = opendir("."); //specify the Client disk directory path here
-    if (di) //check if directory exists or not. if it exists, continue
-    {
-        while ((sample_dir = readdir(di)) != NULL) //read all files inside Client directory in this   manner
-        {
-            filename=strtok(sample_dir->d_name,".");
-            extension=strtok(NULL,".");
-            if(extension!=NULL)
-            {
-            	 if(flag==0) //When flag is set to zero, it means .txt file
-            	 {
-            	  int check; //this check flag will help in matching the extension of file with required
-            	  check =strcmp(extension,"txt");
-                  if(check==0)
-                  {
-                    printf("Transferring text file %s\n",filename);
-                  }
-                  /*
-                  Call the PUTS functions here for this file
-                  */
-                  
-            	 }
-            	 else if(flag==1) //When flag is set to one, it means .c file
-            	 {
-  
-            	   int check; //this check flag will help in matching the extension of file with required
-            	   check =strcmp(extension,"c");
-                  if(check==0)
-                  {
-                    printf("Transferring C file %s\n",filename);
-                  }
-                  /*
-                  Call the PUTS function here for this file
-                  */
-                  
-            	 }
-               
-            }
-            
-        }
-      
-        closedir(di); //Close the directory now
-        printf("FInished transferring all necessary files \n");
-        return 0;
-    }
-    else 
-    {
-    	//If di is NULL, that means there was an error opening the client directory
-    	printf("Error opening directory");
-    	return -1;
-    }
+	write(sockfd, "OK", 2);
+	char buffer[256];
+	while(1)
+	{
+		bzero(buffer, 256);
+		read(sockfd, buffer, 256);
+		if(strcmp(buffer, "DONE") == 0)
+			break;
+		else fetch_file(sockfd, buffer);
+	}
+	write(sockfd, "OK", 2);
+	return 0;
 }
 
-int mget(int sockfd, char *s)
+int send_files_with_ext(int sockfd, char *extension)
 {
-    DIR *di;
-    char *filename;  //will store the filename
-    char *extension;  //will store the file extension
-    struct dirent *sample_dir;
-    int flag;
-    if(strcmp(s, "txt")==0)
-    {
-      flag=0;
-    }
-    else if(strcmp(s, "c")==0)
-    {
-      flag=1;
-    }
-    else 
-    {
-      printf("Incorrect Extension\n");
-      return -1;
-    }
-    di = opendir("."); //specify the Server disk directory path here
-    if (di) //check if directory exists or not. if it exists, continue
-    {
-        while ((sample_dir = readdir(di)) != NULL) //read all files inside Server directory in this   manner
-        {
-            filename=strtok(sample_dir->d_name,".");
-            extension=strtok(NULL,".");
-            if(extension!=NULL)
-            {
-            	 if(flag==0) //When flag is set to zero, it means .txt file
-            	 {
-            	  int check; //this check flag will help in matching the extension of file with required
-            	  check =strcmp(extension,"txt");
-                  if(check==0)
-                  {
-                    printf("Fetching text file %s\n",filename);
-                  }
-                  /*
-                  Call the GETS functions here for this file
-                  */
-                  
-            	 }
-            	 else if(flag==1) //When flag is set to one, it means .c file
-            	 {
-  
-            	   int check; //this check flag will help in matching the extension of file with required
-            	   check =strcmp(extension,"c");
-                  if(check==0)
-                  {
-                    printf("Fetching C file %s\n",filename);
-                  }
-                  /*
-                  Call the GETS function here for this file
-                  */
-            	 }
-               
-            }
-            
-        }
-        closedir(di); //Close the directory now
-        printf("FInished fetching all necessary files\n");
-        return 0;
-    }
-    else 
-    {
-    	//If di is NULL, that means there was an error opening the client directory
-    	printf("Error opening directory");
-    	return -1;
-    }
+	char buffer[256];
+	
+	DIR *di;
+	struct dirent *dir;
+	di = opendir(DSK);
+	char *filename;
+	char *ext;
+	
+	while ((dir = readdir(di)) != NULL) {
+		filename = dir->d_name;
+		if(filename == NULL)
+		continue;
+		ext = strtok(filename, ".");
+		if(ext == NULL)
+		continue;
+		ext = strtok(NULL, ".");
+		if(ext != NULL && strcmp(ext, extension) == 0)
+		{
+			strcat(filename, ".");
+			strcat(filename, extension);
+			print(filename);
+			write(sockfd, filename, strlen(filename));
+			read(sockfd, buffer, 256);
+			send_file(sockfd, filename);
+			read(sockfd, buffer, 256);
+			// break;
+		}
+	}
+	
+	write(sockfd, "DONE", 4);
+	
+	return 1;		
 }
 
 
@@ -375,19 +282,19 @@ int main(int argc, char *argv[])
 			read(clifd, buffer, 1000);
 			fetch_file(clifd, buffer);
 		}
-		else if(strcmp("MGET", buffer) == 0)
-		{
-			write(clifd, "OK", 2);
-			bzero(buffer, 1000);
-			read(clifd, buffer, 1000);
-			write(clifd, "I will send a files.", 20);
-		}
 		else if(strcmp("MPUT", buffer) == 0)
 		{
 			write(clifd, "OK", 2);
 			bzero(buffer, 1000);
 			read(clifd, buffer, 1000);
-			write(clifd, "I will fetch a files.", 21);
+			fetch_files_with_ext(clifd, buffer);
+		}
+		else if(strcmp("MGET", buffer) == 0)
+		{
+			write(clifd, "OK", 2);
+			bzero(buffer, 1000);
+			read(clifd, buffer, 1000);
+			send_files_with_ext(clifd, buffer);
 		}
 		else if(strcmp("ls", buffer) == 0)
 		{

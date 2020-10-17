@@ -61,6 +61,7 @@ int connect_to_server(char *ip, char *port)
 
 int send_file(int sockfd, char *filename)
 {
+	printf("Sending %s. \n", filename);
 	char filepath[256];
 	bzero(filepath, 256);
 	strcpy(filepath, DSK);
@@ -216,150 +217,55 @@ int ls(int sockfd)
 }
 
 
-int mput(int sockfd, char *s)
+int send_files_with_ext(int sockfd, char *extension)
 {
-    DIR *di;
-    char *filename;  //will store the filename
-    char *extension;  //will store the file extension
-    struct dirent *sample_dir;
-    int flag;
-    if(strcmp(s, "txt")==0)
-    {
-      flag= 0;
-    }
-    else if(strcmp(s,"c")==0)
-    {
-      flag= 1;
-    }
-    else 
-    {
-      printf("Incorrect extension\n");
-      return -1;
-    }
-    di = opendir("."); //specify the Client disk directory path here
-    if (di) //check if directory exists or not. if it exists, continue
-    {
-        while ((sample_dir = readdir(di)) != NULL) //read all files inside Client directory in this   manner
-        {
-            filename=strtok(sample_dir->d_name,".");
-            extension=strtok(NULL,".");
-            if(extension!=NULL)
-            {
-            	 if(flag==0) //When flag is set to zero, it means .txt file
-            	 {
-            	  int check; //this check flag will help in matching the extension of file with required
-            	  check =strcmp(extension,"txt");
-                  if(check==0)
-                  {
-                    printf("Transferring text file %s\n",filename);
-                  }
-                  /*
-                  Call the PUTS functions here for this file
-                  */
-                  
-            	 }
-            	 else if(flag==1) //When flag is set to one, it means .c file
-            	 {
-  
-            	   int check; //this check flag will help in matching the extension of file with required
-            	   check =strcmp(extension,"c");
-                  if(check==0)
-                  {
-                    printf("Transferring C file %s\n",filename);
-                  }
-                  /*
-                  Call the PUTS function here for this file
-                  */
-                  
-            	 }
-               
-            }
-            
-        }
-      
-        closedir(di); //Close the directory now
-        printf("FInished transferring all necessary files \n");
-        return 0;
-    }
-    else 
-    {
-    	//If di is NULL, that means there was an error opening the client directory
-    	printf("Error opening directory");
-    	return -1;
-    }
+	char buffer[256];
+	read(sockfd, buffer, 256);
+	
+	DIR *di;
+	struct dirent *dir;
+	di = opendir(DSK);
+	char *filename;
+	char *ext;
+	
+	while ((dir = readdir(di)) != NULL) {
+		filename = dir->d_name;
+		if(filename == NULL)
+		continue;
+		ext = strtok(filename, ".");
+		if(ext == NULL)
+		continue;
+		ext = strtok(NULL, ".");
+		if(ext != NULL && strcmp(ext, extension) == 0)
+		{
+			strcat(filename, ".");
+			strcat(filename, extension);
+			write(sockfd, filename, strlen(filename));
+			send_file(sockfd, filename);
+			// break;
+		}
+	}
+	
+	write(sockfd, "DONE", 4);
+	read(sockfd, buffer, 256);
+	return 1;		
 }
 
-int mget(int sockfd, char *s)
+int fetch_files_with_ext(int sockfd, char *extension)
 {
-    DIR *di;
-    char *filename;  //will store the filename
-    char *extension;  //will store the file extension
-    struct dirent *sample_dir;
-    int flag;
-    if(strcmp(s, "txt")==0)
-    {
-      flag=0;
-    }
-    else if(strcmp(s, "c")==0)
-    {
-      flag=1;
-    }
-    else 
-    {
-      printf("Incorrect Extension\n");
-      return -1;
-    }
-    di = opendir("."); //specify the Server disk directory path here
-    if (di) //check if directory exists or not. if it exists, continue
-    {
-        while ((sample_dir = readdir(di)) != NULL) //read all files inside Server directory in this   manner
-        {
-            filename=strtok(sample_dir->d_name,".");
-            extension=strtok(NULL,".");
-            if(extension!=NULL)
-            {
-            	 if(flag==0) //When flag is set to zero, it means .txt file
-            	 {
-            	  int check; //this check flag will help in matching the extension of file with required
-            	  check =strcmp(extension,"txt");
-                  if(check==0)
-                  {
-                    printf("Fetching text file %s\n",filename);
-                  }
-                  /*
-                  Call the GETS functions here for this file
-                  */
-                  
-            	 }
-            	 else if(flag==1) //When flag is set to one, it means .c file
-            	 {
-  
-            	   int check; //this check flag will help in matching the extension of file with required
-            	   check =strcmp(extension,"c");
-                  if(check==0)
-                  {
-                    printf("Fetching C file %s\n",filename);
-                  }
-                  /*
-                  Call the GETS function here for this file
-                  */
-            	 }
-               
-            }
-            
-        }
-        closedir(di); //Close the directory now
-        printf("FInished fetching all necessary files\n");
-        return 0;
-    }
-    else 
-    {
-    	//If di is NULL, that means there was an error opening the client directory
-    	printf("Error opening directory");
-    	return -1;
-    }
+	char buffer[256];
+	while(1)
+	{
+		bzero(buffer, 256);
+		read(sockfd, buffer, 256);
+		if(strcmp(buffer, "DONE") == 0)
+			break;
+		write(sockfd, "OK", 2);
+		fetch_file(sockfd, buffer);
+		write(sockfd, "OK", 2);
+	}
+	return 0;
 }
-
 
 
 int main(int argc, char *argv[])
@@ -433,30 +339,6 @@ int main(int argc, char *argv[])
 				send_file(sockfd, args[1]);
 			}
 		}
-		else if(strcmp("MGET",args[0]) == 0)
-		{
-			if(cargs != 2)
-			{
-				print("Invalid Syntax.");
-			}
-			else {
-				write(sockfd, args[0], strlen(args[0]));
-				
-				bzero(buffer, 1000);
-				read(sockfd, buffer, 1000);
-				if(strcmp("OK", buffer))
-				{
-					print("ERROR");
-					continue;
-				}
-				write(sockfd, args[1], strlen(args[1]));
-				
-				bzero(buffer, 1000);
-				read(sockfd, buffer, 1000);
-				
-				print(buffer);
-			}
-		}
 		else if(strcmp("MPUT",args[0]) == 0)
 		{
 			if(cargs != 2)
@@ -475,10 +357,27 @@ int main(int argc, char *argv[])
 				}
 				write(sockfd, args[1], strlen(args[1]));
 				
+				send_files_with_ext(sockfd, args[1]);
+			}
+		}
+		else if(strcmp("MGET",args[0]) == 0)
+		{
+			if(cargs != 2)
+			{
+				print("Invalid Syntax.");
+			}
+			else {
+				write(sockfd, args[0], strlen(args[0]));
+				
 				bzero(buffer, 1000);
 				read(sockfd, buffer, 1000);
-				
-				print(buffer);
+				if(strcmp("OK", buffer))
+				{
+					print("ERROR");
+					continue;
+				}
+				write(sockfd, args[1], strlen(args[1]));
+				fetch_files_with_ext(sockfd, args[1]);
 			}
 		}
 		else if(strcmp("ls",args[0]) == 0)
