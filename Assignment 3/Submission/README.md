@@ -4,11 +4,12 @@ Creators:
   * Pooja Gajendra Bhagat , Department: CSE, Roll number: 180101057
   * Saurabh Baranwal, Department: CSE, Roll number: 180101072
 
-The following is a C-based implementation of File Transfer Protocol (FTP). It has the following 4 functionalities:
+The following is a C-based implementation of File Transfer Protocol (FTP). It has the following 5 functionalities:
  * PUT : Transfer a file from client's to server's disk
  * GET : Fetch a file from server's disk to client's disk
  * MGET : Fetch all files of a given extension from server's disk to client's disk
  * MPUT : Transfer all files of a given extension from client's disk to server's disk
+ * ls : List all files
 
 Along with the above 4 functionalities, a file overwrite feature is also implemented i.e. if a file that is to be transferred already exists in the destination directory; the user must specify Y or N to let the system know if the existing file has to be overwritten or not.
 
@@ -53,9 +54,10 @@ The legal format for commands to be entered from client's side is specified as f
 ### Command format
    * PUT : PUT \<filename>                         ( For example : PUT abc.c )
    * GET : GET \<filename>                         ( For example : GET bcd.c )
-   * MGET :  MGET \<extension including dot>     	( For example : MGET .txt)
-   * MPUT : MPUT \<extension including dot>        ( For example : MPUT .txt )
-   * exit -> exit
+   * MGET :  MGET \<extension excluding dot>     	( For example : MGET txt)
+   * MPUT : MPUT \<extension excluding dot>        ( For example : MPUT txt )
+   * ls : ls
+   * exit : exit
   
 In cases, where the terminal asks you permission to whether overwrite a particular file at the destination (if it is already existing), you can give the user input as Y or N depending on whether your choice is "Yes" or "No".
 
