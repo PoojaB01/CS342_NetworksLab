@@ -1,0 +1,159 @@
+fkewfkw[pf
+#include <dirent.h>
+#include <stdio.h>
+#include <string.h>
+
+
+int mput(int sockfd, char *s)
+{
+    DIR *di;
+    char *filename;  //will store the filename
+    char *extension;  //will store the file extension
+    struct dirent *sample_dir;
+    int flag;
+    if(strcmp(s, "txt")==0)
+    {
+      flag= 0;
+    }
+    else if(strcmp(s,"c")==0)
+    {
+      flag= 1;
+    }
+    else 
+    {
+      printf("Incorrect extension\n");
+      return -1;
+    }
+    di = opendir("."); //specify the Client disk directory path here
+    if (di) //check if directory exists or not. if it exists, continue
+    {
+        while ((sample_dir = readdir(di)) != NULL) //read all files inside Client directory in this   manner
+        {
+            filename=strtok(sample_dir->d_name,".");
+            extension=strtok(NULL,".");
+            if(extension!=NULL)
+            {
+            	 if(flag==0) //When flag is set to zero, it means .txt file
+            	 {
+            	  int check; //this check flag will help in matching the extension of file with required
+            	  check =strcmp(extension,"txt");
+                  if(check==0)
+                  {
+                    printf("Transferring text file %s\n",filename);
+                  }
+                  /*
+                  Call the PUTS functions here for this file
+                  */
+                  
+            	 }
+            	 else if(flag==1) //When flag is set to one, it means .c file
+            	 {
+  
+            	   int check; //this check flag will help in matching the extension of file with required
+            	   check =strcmp(extension,"c");
+                  if(check==0)
+                  {
+                    printf("Transferring C file %s\n",filename);
+                  }
+                  /*
+                  Call the PUTS function here for this file
+                  */
+                  
+            	 }
+               
+            }
+            
+        }
+      
+        closedir(di); //Close the directory now
+        printf("FInished transferring all necessary files \n");
+        return 0;
+    }
+    else 
+    {
+    	//If di is NULL, that means there was an error opening the client directory
+    	printf("Error opening directory");
+    	return -1;
+    }
+}
+
+int mget(int sockfd, char *s)
+{
+    DIR *di;
+    char *filename;  //will store the filename
+    char *extension;  //will store the file extension
+    struct dirent *sample_dir;
+    int flag;
+    if(strcmp(s, "txt")==0)
+    {
+      flag=0;
+    }
+    else if(strcmp(s, "c")==0)
+    {
+      flag=1;
+    }
+    else 
+    {
+      printf("Incorrect Extension\n");
+      return -1;
+    }
+    di = opendir("."); //specify the Server disk directory path here
+    if (di) //check if directory exists or not. if it exists, continue
+    {
+        while ((sample_dir = readdir(di)) != NULL) //read all files inside Server directory in this   manner
+        {
+            filename=strtok(sample_dir->d_name,".");
+            extension=strtok(NULL,".");
+            if(extension!=NULL)
+            {
+            	 if(flag==0) //When flag is set to zero, it means .txt file
+            	 {
+            	  int check; //this check flag will help in matching the extension of file with required
+            	  check =strcmp(extension,"txt");
+                  if(check==0)
+                  {
+                    printf("Fetching text file %s\n",filename);
+                  }
+                  /*
+                  Call the GETS functions here for this file
+                  */
+                  
+            	 }
+            	 else if(flag==1) //When flag is set to one, it means .c file
+            	 {
+  
+            	   int check; //this check flag will help in matching the extension of file with required
+            	   check =strcmp(extension,"c");
+                  if(check==0)
+                  {
+                    printf("Fetching C file %s\n",filename);
+                  }
+                  /*
+                  Call the GETS function here for this file
+                  */
+            	 }
+               
+            }
+            
+        }
+        closedir(di); //Close the directory now
+        printf("FInished fetching all necessary files\n");
+        return 0;
+    }
+    else 
+    {
+    	//If di is NULL, that means there was an error opening the client directory
+    	printf("Error opening directory");
+    	return -1;
+    }
+}
+
+
+int main()
+{
+	int x= mget(1, "txt");
+	int y= mput(0, "c");
+	
+	return 0;
+}
+
