@@ -154,6 +154,7 @@ int main(int argc, char *argv[])
 		}
 		else { // default
 			print("Invalid Command.");
+			print("");
 		}
 	}
 	close(sockfd);
@@ -306,9 +307,9 @@ int send_file(int sockfd, char *filename)
 	// send file contents
 	do {
 		bzero(buffer, 1024);
-		size = fread(buffer, sizeof(char), 1024, fd);
-		write(sockfd, buffer, size);
-	} while(size == 1024);
+		size = fread(buffer, sizeof(char), 1023, fd);
+		send(sockfd, buffer, size, 0);
+	} while(size == 1023);
 	
 	end:
 	read(sockfd, buffer, 1024);
@@ -384,10 +385,12 @@ int fetch_file(int sockfd, char *filename)
 	// fetch file contents
 	while(1)
 	{
-		bzero(buffer, 1024);
-		read(sockfd, buffer, 1024);
+		bzero(buffer, 1023);
+		recv(sockfd, buffer, 1023, 0);
+		buffer[1023] = '\0';
+		
 		fwrite(buffer, sizeof(char), strlen(buffer), fd);
-		if(strlen(buffer) < 1024)
+		if(strlen(buffer) < 1023)
 			break;
 	}
 	end:
