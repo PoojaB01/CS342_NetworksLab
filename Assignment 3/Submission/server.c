@@ -159,8 +159,22 @@ int send_file(int sockfd, char *filename)
 		fclose(fd);
 		return -1;
 	}
-	
+		
 	int size;
+	
+	fseek(fd, 0L, SEEK_END);
+	size = ftell(fd);
+	
+	fseek(fd, 0L, SEEK_SET);
+	// check if file empty
+	if(size == 0)
+	{
+		write(sockfd, "EMPTY", 5);
+		read(sockfd, buffer, 1024);
+		goto end;
+	}
+	write(sockfd, "OK", 5);
+	read(sockfd, buffer, 1024);
 	
 	// send file contents
 	do {
@@ -169,6 +183,7 @@ int send_file(int sockfd, char *filename)
 		write(sockfd, buffer, size);
 	} while(size == 1024);
 	
+	end:
 	fclose(fd);
 
 	return 0;
@@ -221,14 +236,20 @@ int fetch_file(int sockfd, char *filename)
 	
 	write(sockfd, "OK", 2);
 	
-	// recieve file contents
-	while(1)
+	bzero(buffer, 1024);
+	read(sockfd, buffer, 1024);
+	if(strcmp("EMPTY", buffer) != 0)	
 	{
-		bzero(buffer, 1024);
-		read(sockfd, buffer, 1024);
-		fwrite(buffer, sizeof(char), strlen(buffer), fd);
-		if(strlen(buffer) < 1024)
-			break;
+		write(sockfd, "OK", 2);
+		// recieve file contents
+		while(1)
+		{
+			bzero(buffer, 1024);
+			read(sockfd, buffer, 1024);
+			fwrite(buffer, sizeof(char), strlen(buffer), fd);
+			if(strlen(buffer) < 1024)
+				break;
+		}
 	}
 	
 	fclose(fd);

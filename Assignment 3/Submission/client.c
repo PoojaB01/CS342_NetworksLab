@@ -264,7 +264,7 @@ int send_file(int sockfd, char *filename)
 		
 		bzero(buffer, 1024);
 		fgets(buffer, 1024, stdin);
-		if(buffer[0] != 'Y' && buffer[0] != 'y')
+		if(buffer[0] != 'Y')
 		{
 			write(sockfd, "ABORT", 5);
 			read(sockfd, buffer, 1024);
@@ -280,6 +280,7 @@ int send_file(int sockfd, char *filename)
 		}
 	}
 	
+	
 	if(strcmp(buffer, "OK") != 0)
 	{
 		print("Error creating file on server.");
@@ -287,9 +288,21 @@ int send_file(int sockfd, char *filename)
 		fclose(fd);
 		return -1;
 	}
-	
 	int size;
 	
+	fseek(fd, 0L, SEEK_END);
+	size = ftell(fd);
+	
+	fseek(fd, 0L, SEEK_SET);
+	// check if file empty
+	if(size == 0)
+	{
+		write(sockfd, "EMPTY", 5);
+		goto end;
+	}
+	write(sockfd, "OK", 2);
+	
+	read(sockfd, buffer, 1024);
 	// send file contents
 	do {
 		bzero(buffer, 1024);
@@ -297,6 +310,7 @@ int send_file(int sockfd, char *filename)
 		write(sockfd, buffer, size);
 	} while(size == 1024);
 	
+	end:
 	read(sockfd, buffer, 1024);
 
 	fclose(fd);
@@ -359,6 +373,14 @@ int fetch_file(int sockfd, char *filename)
 	
 	write(sockfd, "OK", 1024);
 	
+	bzero(buffer, 1024);
+	read(sockfd, buffer, 1024);
+	if(strcmp(buffer, "EMPTY") == 0)
+	{
+		write(sockfd, "OK", 2);
+		goto end;
+	}
+	write(sockfd, "OK", 2);
 	// fetch file contents
 	while(1)
 	{
@@ -368,7 +390,7 @@ int fetch_file(int sockfd, char *filename)
 		if(strlen(buffer) < 1024)
 			break;
 	}
-	
+	end:
 	fclose(fd);
 	bzero(buffer, 1024);
 	
