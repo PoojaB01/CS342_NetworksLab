@@ -11,7 +11,7 @@ The following is a C-based implementation of File Transfer Protocol (FTP). It ha
  * MPUT : Transfer all files of a given extension from client's disk to server's disk
  * ls : List all files
 
-Along with the above 4 functionalities, a file overwrite feature is also implemented i.e. if a file that is to be transferred already exists in the destination directory; the user must specify Y or N to let the system know if the existing file has to be overwritten or not.
+Along with the above 5 functionalities, a file overwrite feature is also implemented i.e. if a file that is to be transferred already exists in the destination directory; the user must specify Y or N to let the system know if the existing file has to be overwritten or not.
 
 ### Code Details
 
