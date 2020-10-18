@@ -51,10 +51,10 @@ The client will have to give input a command in legal format so that necessary a
 
 The legal format for commands to be entered from client's side is specified as follows:
 ### Command format
-   * PUT : PUT <filename>                         ( For example : PUT abc.c )
-   * GET : GET <filename>                         ( For example : GET bcd.c )
-   * MGET :  MGET <extension including dot>     	( For example : MGET .txt)
-   * MPUT : MPUT <extension including dot>        ( For example : MPUT .txt )
+   * PUT : PUT \<filename>                         ( For example : PUT abc.c )
+   * GET : GET \<filename>                         ( For example : GET bcd.c )
+   * MGET :  MGET \<extension including dot>     	( For example : MGET .txt)
+   * MPUT : MPUT \<extension including dot>        ( For example : MPUT .txt )
    * exit -> exit
   
 In cases, where the terminal asks you permission to whether overwrite a particular file at the destination (if it is already existing), you can give the user input as Y or N depending on whether your choice is "Yes" or "No".
