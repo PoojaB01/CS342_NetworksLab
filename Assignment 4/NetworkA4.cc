@@ -183,6 +183,8 @@ uint curRate = 20;
 void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHelp, Ptr<FlowMonitor> flowMonitor)
 {
 	app->setRate(newRate);
+	
+	std::cout<<"Varying UDP rate. Current Rate: "<<curRate<<" Mbps\n";
 	Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier> (flowMonitorHelp->GetClassifier ());
 	std::map<FlowId, FlowMonitor::FlowStats> Stats = flowMonitor->GetFlowStats ();
 	double Flow = 0, FlowSquare = 0;
@@ -193,45 +195,45 @@ void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHel
 	
 	for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = Stats.begin (); i != Stats.end (); ++i)
 	{
-		Ipv4FlowClassifier::FiveTuple t = classifier->FindFlow (i->first);
+		Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow (i->first);
 		//Calculate the throughput of the flow
 		double throughPut = i->second.rxBytes * 8.0 / (i->second.timeLastRxPacket.GetSeconds() - i->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
 		Flow += throughPut;
 		FlowSquare += throughPut * throughPut ;
 		
 		
-		if(tcpSet.find(std::make_pair(t.sourceAddress,t.destinationAddress)) != tcpSet.end())
+		if(tcpSet.find(std::make_pair(ft.sourceAddress,ft.destinationAddress)) != tcpSet.end())
 		{
 			tcpTP += throughPut;
 			// std::cout<<t.sourceAddress<<"x"<<t.destinationAddress<<std::endl;
 		}
-		if(udpSet.find(std::make_pair(t.sourceAddress,t.destinationAddress)) != udpSet.end())
+		if(udpSet.find(std::make_pair(ft.sourceAddress,ft.destinationAddress)) != udpSet.end())
 		{
 			udpTP += throughPut;
 			// std::cout<<t.sourceAddress<<" "<<t.destinationAddress<<std::endl;
 			
 		}
-		if(t.sourceAddress == "10.1.2.1" && t.destinationAddress == "10.1.1.1")
+		if(ft.sourceAddress == "10.1.2.1" && ft.destinationAddress == "10.1.1.1")
 		{
 			throughputTCP[0] += throughPut;
 		}
-		else if(t.sourceAddress == "10.1.3.1" && t.destinationAddress == "10.1.6.1")
+		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.6.1")
 		{
 			throughputTCP[1] += throughPut;
 		}
-		else if(t.sourceAddress == "10.1.4.1" && t.destinationAddress == "10.1.6.1")
+		else if(ft.sourceAddress == "10.1.4.1" && ft.destinationAddress == "10.1.6.1")
 		{
 			throughputTCP[2] += throughPut;
 		}
-		else if(t.sourceAddress == "10.1.5.1" && t.destinationAddress == "10.1.2.1" )
+		else if(ft.sourceAddress == "10.1.5.1" && ft.destinationAddress == "10.1.2.1")
 		{
 			throughputTCP[3] += throughPut;
 		}
-		else if(t.sourceAddress == "10.1.3.1" && t.destinationAddress == "10.1.4.1" )
+		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.4.1")
 		{
 		    	throughputUDP[0] += throughPut;
 		}
-		else if(t.sourceAddress == "10.1.3.1" && t.destinationAddress == "10.1.1.1" )
+		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.1.1")
 		{
 			throughputUDP[2] += throughPut;
 		}
@@ -248,7 +250,6 @@ void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHel
 	dataudpTPvR.Add(curRate, udpTP);
 	
 	curRate += 10; 
-	std::cout<<curRate<<std::endl;
 	return;
 }
 
@@ -310,7 +311,7 @@ int main(int argc, char *argv[])
 	int flag = 1;
 	
 	// Varying buffer size
-	for(uint bufferSize = 10*packetSize; bufferSize <= 90*packetSize; )
+	for(uint bufferSize = 10*packetSize; bufferSize <= 800*packetSize; )
 	{
 		NodeContainer H, R;
 		
@@ -427,7 +428,7 @@ int main(int argc, char *argv[])
 		
 		for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = Stats.begin (); i != Stats.end (); ++i)
 		{
-			Ipv4FlowClassifier::FiveTuple t = classifier->FindFlow (i->first);
+			Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow (i->first);
 			
 			//Calculate the throughput of the flow
 			double throughPut = i->second.rxBytes * 8.0 / (i->second.timeLastRxPacket.GetSeconds() - i->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
@@ -435,13 +436,13 @@ int main(int argc, char *argv[])
 			FlowSquare += throughPut * throughPut ;
 			
 			
-			if(tcpSet.find(std::make_pair(t.sourceAddress,t.destinationAddress)) != tcpSet.end())
+			if(tcpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != tcpSet.end())
 			{
 				tcpTP += throughPut;
 				// std::cout<<t.sourceAddress<<"x"<<t.destinationAddress<<std::endl;
 			}
-			if(udpSet.find(std::make_pair(t.sourceAddress,t.destinationAddress)) != udpSet.end())
-			{
+			if(udpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != udpSet.end())
+			{ 
 				udpTP += throughPut;
 				// std::cout<<t.sourceAddress<<" "<<t.destinationAddress<<std::endl;
 				
@@ -450,13 +451,13 @@ int main(int argc, char *argv[])
 		}
 		double FairnessIndex = (Flow * Flow)/ (6 * FlowSquare);
 		
-		//Adding to the dataset
+		// Adding to the dataset
 		if(flag == 0)
 		{
 			DataFairvBS.Add (bufferSize/packetSize, FairnessIndex);
 			DatatcpTPvBS.Add (bufferSize/packetSize, tcpTP);
 			DataudpTPvBS.Add (bufferSize/packetSize, udpTP);
-			std::cout<<bufferSize<<"   "<<Flow<<"   "<<tcpTP<<"   "<<udpTP<<std::endl;
+			std::cout<<"Varying Buffer Size. Current Size: "<<bufferSize/packetSize<<"\n";
 		
 		
 		
@@ -475,9 +476,9 @@ int main(int argc, char *argv[])
 	}
 	
 	// Generate plt files
-	getPlot("FairnesvBS", "Fairness vs Buffer Size", "Buffer Size (no. of packets)", "Fairness", "set xrange [0:800]", DataFairvBS);
-	getPlot("TCPTPvBS", "TCP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput(Mbps)", "set xrange [0:800]", DatatcpTPvBS);
-	getPlot("UDPTPvBS", "UDP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput(Mbps)", "set xrange [0:800]", DataudpTPvBS);
+	getPlot("FairnessvBS", "Fairness vs Buffer Size", "Buffer Size (no. of packets)", "Fairness", "set xrange [0:800]", DataFairvBS);
+	getPlot("TCPTPvBS", "TCP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput (Mbps)", "set xrange [0:800]", DatatcpTPvBS);
+	getPlot("UDPTPvBS", "UDP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput (Mbps)", "set xrange [0:800]", DataudpTPvBS);
 	for(int i=0;i<4;i++)
 	{
 		std::string label = "graph";
@@ -486,7 +487,7 @@ int main(int argc, char *argv[])
 		title = title + std::to_string(i+1);
 		title += " vs UDP Rate";
 		
-		getPlot(label, title, "UDP Rate(Mbps)", "Throughput(Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
+		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
 	}
 	for(int i=0;i<2;i++)
 	{
@@ -496,7 +497,7 @@ int main(int argc, char *argv[])
 		title = title + std::to_string(i+1);
 		title += " vs UDP Rate";
 		
-		getPlot(label, title, "UDP Rate(Mbps)", "Throughput(Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
+		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
 	}
 	getPlot("TCPTPvRate", "TCP Throughput vs UDP Rate", "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", datatcpTPvR);
 	getPlot("UDPTPvRate", "UDP Throughput vs UDP Rate", "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataudpTPvR);
