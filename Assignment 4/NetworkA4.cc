@@ -187,7 +187,7 @@ void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHel
 	std::cout<<"Varying UDP rate. Current Rate: "<<curRate<<" Mbps\n";
 	Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier> (flowMonitorHelp->GetClassifier ());
 	std::map<FlowId, FlowMonitor::FlowStats> Stats = flowMonitor->GetFlowStats ();
-	double Flow = 0, FlowSquare = 0;
+
 	double tcpTP = 0, udpTP = 0;
 	
 	// Store individual connection throughput
@@ -196,58 +196,58 @@ void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHel
 	for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = Stats.begin (); i != Stats.end (); ++i)
 	{
 		Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow (i->first);
+		
 		//Calculate the throughput of the flow
 		double throughPut = i->second.rxBytes * 8.0 / (i->second.timeLastRxPacket.GetSeconds() - i->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
-		Flow += throughPut;
-		FlowSquare += throughPut * throughPut ;
+
 		
-		
-		if(tcpSet.find(std::make_pair(ft.sourceAddress,ft.destinationAddress)) != tcpSet.end())
-		{
-			tcpTP += throughPut;
-			// std::cout<<t.sourceAddress<<"x"<<t.destinationAddress<<std::endl;
-		}
-		if(udpSet.find(std::make_pair(ft.sourceAddress,ft.destinationAddress)) != udpSet.end())
-		{
-			udpTP += throughPut;
-			// std::cout<<t.sourceAddress<<" "<<t.destinationAddress<<std::endl;
-			
-		}
 		if(ft.sourceAddress == "10.1.2.1" && ft.destinationAddress == "10.1.1.1")
 		{
+			tcpTP += throughPut;
 			throughputTCP[0] += throughPut;
 		}
 		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.6.1")
 		{
+			tcpTP += throughPut;
 			throughputTCP[1] += throughPut;
 		}
 		else if(ft.sourceAddress == "10.1.4.1" && ft.destinationAddress == "10.1.6.1")
 		{
+			tcpTP += throughPut;
 			throughputTCP[2] += throughPut;
 		}
 		else if(ft.sourceAddress == "10.1.5.1" && ft.destinationAddress == "10.1.2.1")
 		{
+			tcpTP += throughPut;
 			throughputTCP[3] += throughPut;
 		}
 		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.4.1")
 		{
+			udpTP += throughPut;
 		    	throughputUDP[0] += throughPut;
 		}
 		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.1.1")
 		{
-			throughputUDP[2] += throughPut;
+			udpTP += throughPut;
+			throughputUDP[1] += throughPut;
 		}
 	}
 	for(int i=0;i<4;i++)
 	{
 		dataiTCPvR[i].Add(curRate, throughputTCP[i]);
+		std::cout<<throughputTCP[i]<<" ";
 	}
+	std::cout<<"Total TCP TP: "<< tcpTP << std::endl;
 	for(int i=0;i<2;i++)
 	{
 		dataiUDPvR[i].Add(curRate, throughputUDP[i]);
+		std::cout<<throughputUDP[i]<<" ";
 	}
+	std::cout<<"Total UDP TP: "<< udpTP << std::endl;
+	
 	datatcpTPvR.Add(curRate, tcpTP);
 	dataudpTPvR.Add(curRate, udpTP);
+	
 	
 	curRate += 10; 
 	return;
@@ -294,6 +294,7 @@ int main(int argc, char *argv[])
 	
 	makeDataSet(datatcpTPvR, "TCP throughput vs UDP Rate");
 	makeDataSet(dataudpTPvR, "UDP throughput vs UDP Rate");
+	
 	for(int i=0;i<4;i++)
 	{
 		std::string label = "TCP ";
@@ -423,7 +424,7 @@ int main(int argc, char *argv[])
 		
 		std::map<FlowId, FlowMonitor::FlowStats> Stats = fmonitor_ptr->GetFlowStats ();
 		
-		double Flow = 0, FlowSquare = 0;
+		double sumFlow = 0, sumFlowSquare = 0;
 		double tcpTP = 0, udpTP = 0;
 		
 		for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = Stats.begin (); i != Stats.end (); ++i)
@@ -432,24 +433,21 @@ int main(int argc, char *argv[])
 			
 			//Calculate the throughput of the flow
 			double throughPut = i->second.rxBytes * 8.0 / (i->second.timeLastRxPacket.GetSeconds() - i->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
-			Flow += throughPut;
-			FlowSquare += throughPut * throughPut ;
+			sumFlow += throughPut;
+			sumFlowSquare += throughPut * throughPut ;
 			
 			
 			if(tcpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != tcpSet.end())
 			{
 				tcpTP += throughPut;
-				// std::cout<<t.sourceAddress<<"x"<<t.destinationAddress<<std::endl;
 			}
 			if(udpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != udpSet.end())
 			{ 
 				udpTP += throughPut;
-				// std::cout<<t.sourceAddress<<" "<<t.destinationAddress<<std::endl;
-				
 			}
 			
 		}
-		double FairnessIndex = (Flow * Flow)/ (6 * FlowSquare);
+		double FairnessIndex = (sumFlow * sumFlow)/ (6 * sumFlowSquare);
 		
 		// Adding to the dataset
 		if(flag == 0)
@@ -458,7 +456,7 @@ int main(int argc, char *argv[])
 			DatatcpTPvBS.Add (bufferSize/packetSize, tcpTP);
 			DataudpTPvBS.Add (bufferSize/packetSize, udpTP);
 			std::cout<<"Varying Buffer Size. Current Size: "<<bufferSize/packetSize<<"\n";
-		
+			std::cout<<"TCP TP: "<<tcpTP<<" UDP TP: "<<udpTP<<" Fairness: "<<FairnessIndex<<std::endl;
 		
 		
 			if(bufferSize < 100*packetSize)
@@ -479,6 +477,7 @@ int main(int argc, char *argv[])
 	getPlot("FairnessvBS", "Fairness vs Buffer Size", "Buffer Size (no. of packets)", "Fairness", "set xrange [0:800]", DataFairvBS);
 	getPlot("TCPTPvBS", "TCP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput (Mbps)", "set xrange [0:800]", DatatcpTPvBS);
 	getPlot("UDPTPvBS", "UDP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput (Mbps)", "set xrange [0:800]", DataudpTPvBS);
+	
 	for(int i=0;i<4;i++)
 	{
 		std::string label = "graph";
@@ -489,6 +488,7 @@ int main(int argc, char *argv[])
 		
 		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
 	}
+	
 	for(int i=0;i<2;i++)
 	{
 		std::string label = "graph";
@@ -497,8 +497,9 @@ int main(int argc, char *argv[])
 		title = title + std::to_string(i+1);
 		title += " vs UDP Rate";
 		
-		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
+		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiUDPvR[i]);
 	}
+	
 	getPlot("TCPTPvRate", "TCP Throughput vs UDP Rate", "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", datatcpTPvR);
 	getPlot("UDPTPvRate", "UDP Throughput vs UDP Rate", "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataudpTPvR);
 }
