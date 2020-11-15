@@ -5,7 +5,7 @@ set xlabel "UDP Rate (Mbps)"
 set ylabel "Throughput (Mbps)"
 
 set xrange [10:100]
-plot "-"  title "Name" with linespoints
+plot "-"  title "Throughput" with linespoints
 20 0.0192368
 30 0.0506035
 40 0.130418

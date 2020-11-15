@@ -5,7 +5,7 @@ set xlabel "Buffer Size (no. of packets)"
 set ylabel "Throughput (Mbps)"
 
 set xrange [0:800]
-plot "-"  title "Name" with linespoints
+plot "-"  title "Throughput" with linespoints
 10 27.9754
 25 27.571
 40 27.6045

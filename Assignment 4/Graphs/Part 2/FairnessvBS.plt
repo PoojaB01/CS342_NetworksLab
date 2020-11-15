@@ -5,7 +5,7 @@ set xlabel "Buffer Size (no. of packets)"
 set ylabel "Fairness"
 
 set xrange [0:800]
-plot "-"  title "Name" with linespoints
+plot "-"  title "Fairness Index" with linespoints
 10 0.43459
 25 0.59323
 40 0.675638
