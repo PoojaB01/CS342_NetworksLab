@@ -3,7 +3,7 @@
 GROUP-67 COMPUTER NETWORKS LAB
 
 Creators:
-  * Pooja Gajendra Bhagat , Department: CSE, Roll number: 180101057
+  * Pooja Gajendra Bhagat, Department: CSE, Roll number: 180101057
   * Saurabh Baranwal, Department: CSE, Roll number: 180101072
 
 The first tep is to install NS-3. That can be done through this site: https://www.nsnam.org/

@@ -18,13 +18,8 @@ typedef uint32_t uint;
 uint packetSize = 1500;
 
 NS_LOG_COMPONENT_DEFINE("Assignment4");
-	
-// store source and destination of TCP and UDP connections
-std::map<std::pair<Ipv4Address, Ipv4Address>, uint16_t> tcpSet, udpSet;
- 
-Gnuplot2dDataset dataiTCPvR[4], dataiUDPvR[2];
-Gnuplot2dDataset datatcpTPvR, dataudpTPvR;
 
+// Customised application
 class MyApp : public Application 
 {
 public:
@@ -133,137 +128,32 @@ MyApp::setRate(DataRate newRate)
 	m_dataRate = newRate;
 	return;
 }
-	
-uint16_t n_tcp = 0; // Used for indexing udp connections
 
-void setTCPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port)
-{
-	uint16_t sinkPort = port;
-	
-	Address sinkAddress(InetSocketAddress(iface.GetAddress(0), sinkPort));
-	PacketSinkHelper PSH("ns3::TcpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), sinkPort));
-	ApplicationContainer appCont = PSH.Install(H.Get(sink));
-	
-	appCont.Start(Seconds(0));
-	appCont.Stop(Seconds(10));
-	
-	Ptr<Socket> socket = Socket::CreateSocket(H.Get(source), TcpSocketFactory::GetTypeId());
-	socket->SetAttribute("SndBufSize", ns3::UintegerValue(bufferSize));
-	socket->SetAttribute("RcvBufSize", ns3::UintegerValue(bufferSize));
-	
-	Ptr<MyApp> app = CreateObject<MyApp>();
-	app->Setup(socket, sinkAddress, packetSize, 1000000, DataRate("20Mbps"));
-	H.Get(source)->AddApplication(app);
-	
-	app->SetStartTime(Seconds(1));
-	app->SetStopTime(Seconds(10));
-	
-	tcpSet[std::make_pair(iface1.GetAddress(0), iface.GetAddress(0))] = n_tcp++;
-	
-}
+// Global Variables and function prototypes
+
+// store source and destination of TCP and UDP connections
+std::map<std::pair<Ipv4Address, Ipv4Address>, uint16_t> tcpSet, udpSet;
+ 
+Gnuplot2dDataset dataiTCPvR[4], dataiUDPvR[2];
+Gnuplot2dDataset datatcpTPvR, dataudpTPvR;
+
+uint16_t n_tcp = 0; // Used for indexing tcp connections
+
+void setTCPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port);
 
 uint16_t n_udp = 0; // Used for indexing udp connections
 
-Ptr<MyApp> setUDPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port)
-{
-	uint16_t sinkPort = port;
-	
-	Address sinkAddress(InetSocketAddress(iface.GetAddress(0), sinkPort));
-	PacketSinkHelper PSH("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), sinkPort));
-	ApplicationContainer appCont = PSH.Install(H.Get(sink));
-	
-	appCont.Start(Seconds(0));
-	appCont.Stop(Seconds(10));
-	
-	Ptr<Socket> socket = Socket::CreateSocket(H.Get(source), UdpSocketFactory::GetTypeId());
-	socket->SetAttribute("RcvBufSize", ns3::UintegerValue(bufferSize));
-	
-	Ptr<MyApp> app = CreateObject<MyApp>();
-	app->Setup(socket, sinkAddress, packetSize, 1000000, DataRate("20Mbps"));
-	H.Get(source)->AddApplication(app);
-	
-	app->SetStartTime(Seconds(1));
-	app->SetStopTime(Seconds(10));
-	
-	udpSet[std::make_pair(iface1.GetAddress(0), iface.GetAddress(0))] = n_udp++;
-	
-	return app;
-}
+Ptr<MyApp> setUDPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port);
 
 uint curRate = 20;
 
-void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHelp, Ptr<FlowMonitor> flowMonitor)
-{
-	app->setRate(newRate);
-	
-	std::cout<<"Varying UDP rate. Current Rate: "<<curRate<<" Mbps\n";
-	Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier>(flowMonitorHelp->GetClassifier());
-	std::map<FlowId, FlowMonitor::FlowStats> Stats = flowMonitor->GetFlowStats();
+void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHelp, Ptr<FlowMonitor> flowMonitor);
 
-	double tcpTP = 0, udpTP = 0;
-	
-	// Store individual connection throughput
-	double throughputTCP[4] = {0}, throughputUDP[2] = {0};
-	
-	for(std::map<FlowId, FlowMonitor::FlowStats>::const_iterator itr = Stats.begin(); itr != Stats.end(); itr++)
-	{
-		Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow(itr->first);
-		
-		//Calculate the throughput of the flow
-		double throughPut = itr->second.rxBytes * 8.0 /(itr->second.timeLastRxPacket.GetSeconds() - itr->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
+void makeDataSet(Gnuplot2dDataset &dataset, std::string name);
 
-		if(tcpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != tcpSet.end())
-		{
-			tcpTP += throughPut;
-			throughputTCP[tcpSet[std::make_pair(ft.sourceAddress, ft.destinationAddress)]] += throughPut;
-		}
-		if(udpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != udpSet.end())
-		{ 
-			udpTP += throughPut;
-			throughputUDP[udpSet[std::make_pair(ft.sourceAddress, ft.destinationAddress)]] += throughPut;
-		}
-	}
-	
-	for(int i=0;i<4;i++)
-	{
-		dataiTCPvR[i].Add(curRate, throughputTCP[i]);
-		std::cout<<throughputTCP[i]<<" ";
-	}
-	std::cout<<"Total TCP TP: "<< tcpTP << std::endl;
-	for(int i=0;i<2;i++)
-	{
-		dataiUDPvR[i].Add(curRate, throughputUDP[i]);
-		std::cout<<throughputUDP[i]<<" ";
-	}
-	std::cout<<"Total UDP TP: "<< udpTP << std::endl;
-	
-	datatcpTPvR.Add(curRate, tcpTP);
-	dataudpTPvR.Add(curRate, udpTP);
-	
-	
-	curRate += 10; 
-	return;
-}
+void getPlot(std::string fname, std::string title, std::string legendx, std::string legendy, std::string extra, Gnuplot2dDataset &dataset);
 
-void makeDataSet(Gnuplot2dDataset &dataset, std::string name)
-{
-	dataset.SetTitle("Name");
-	dataset.SetStyle(Gnuplot2dDataset::LINES_POINTS);
-} 
 
-void getPlot(std::string fname, std::string title, std::string legendx, std::string legendy, std::string extra, Gnuplot2dDataset &dataset)
-{
-	std::ofstream plotFile((fname + ".plt").c_str());
-	Gnuplot plot(fname + ".png");
-	plot.SetTitle(title);
-	plot.SetTerminal("png");
-	plot.AppendExtra(extra);
-	plot.SetLegend(legendx, legendy);
-	plot.AddDataset(dataset);
-	plot.GenerateOutput(plotFile);
-	plotFile.close();
-	return;
-}
 
 int main(int argc, char *argv[])
 {
@@ -507,10 +397,133 @@ int main(int argc, char *argv[])
 	
 }
 		
-		
-		
-		
-		
+void setTCPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port)
+{
+	uint16_t sinkPort = port;
 	
+	// Configure Sink
+	Address sinkAddress(InetSocketAddress(iface.GetAddress(0), sinkPort));
+	PacketSinkHelper PSH("ns3::TcpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), sinkPort));
+	ApplicationContainer appCont = PSH.Install(H.Get(sink));
+	
+	appCont.Start(Seconds(0));
+	appCont.Stop(Seconds(10));
+	
+	// Configure Socket
+	Ptr<Socket> socket = Socket::CreateSocket(H.Get(source), TcpSocketFactory::GetTypeId());
+	socket->SetAttribute("SndBufSize", ns3::UintegerValue(bufferSize));
+	socket->SetAttribute("RcvBufSize", ns3::UintegerValue(bufferSize));
+	
+	// Configure Application on source
+	Ptr<MyApp> app = CreateObject<MyApp>();
+	app->Setup(socket, sinkAddress, packetSize, 1000000, DataRate("20Mbps"));
+	H.Get(source)->AddApplication(app);
+	
+	app->SetStartTime(Seconds(1));
+	app->SetStopTime(Seconds(10));
+	
+	tcpSet[std::make_pair(iface1.GetAddress(0), iface.GetAddress(0))] = n_tcp++;
+	
+}
 
+Ptr<MyApp> setUDPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port)
+{
+	uint16_t sinkPort = port;
+	
+	// Configure Sink
+	Address sinkAddress(InetSocketAddress(iface.GetAddress(0), sinkPort));
+	PacketSinkHelper PSH("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), sinkPort));
+	ApplicationContainer appCont = PSH.Install(H.Get(sink));
+	
+	appCont.Start(Seconds(0));
+	appCont.Stop(Seconds(10));
+	
+	// Configure Socket
+	Ptr<Socket> socket = Socket::CreateSocket(H.Get(source), UdpSocketFactory::GetTypeId());
+	socket->SetAttribute("RcvBufSize", ns3::UintegerValue(bufferSize));
+	
+	// Configure Application on source
+	Ptr<MyApp> app = CreateObject<MyApp>();
+	app->Setup(socket, sinkAddress, packetSize, 1000000, DataRate("20Mbps"));
+	H.Get(source)->AddApplication(app);
+	
+	app->SetStartTime(Seconds(1));
+	app->SetStopTime(Seconds(10));
+	
+	udpSet[std::make_pair(iface1.GetAddress(0), iface.GetAddress(0))] = n_udp++;
+	
+	return app;
+}
 
+void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHelp, Ptr<FlowMonitor> flowMonitor)
+{
+	app->setRate(newRate);
+	
+	std::cout<<"Varying UDP rate. Current Rate: "<<curRate<<" Mbps\n";
+	Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier>(flowMonitorHelp->GetClassifier());
+	std::map<FlowId, FlowMonitor::FlowStats> Stats = flowMonitor->GetFlowStats();
+
+	double tcpTP = 0, udpTP = 0;
+	
+	// Store individual connection throughput
+	double throughputTCP[4] = {0}, throughputUDP[2] = {0};
+	
+	for(std::map<FlowId, FlowMonitor::FlowStats>::const_iterator itr = Stats.begin(); itr != Stats.end(); itr++)
+	{
+		Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow(itr->first);
+		
+		//Calculate the throughput of the flow
+		double throughPut = itr->second.rxBytes * 8.0 /(itr->second.timeLastRxPacket.GetSeconds() - itr->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
+
+		if(tcpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != tcpSet.end())
+		{
+			tcpTP += throughPut;
+			throughputTCP[tcpSet[std::make_pair(ft.sourceAddress, ft.destinationAddress)]] += throughPut;
+		}
+		if(udpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != udpSet.end())
+		{ 
+			udpTP += throughPut;
+			throughputUDP[udpSet[std::make_pair(ft.sourceAddress, ft.destinationAddress)]] += throughPut;
+		}
+	}
+	
+	for(int i=0;i<4;i++)
+	{
+		dataiTCPvR[i].Add(curRate, throughputTCP[i]);
+		std::cout<<throughputTCP[i]<<" ";
+	}
+	std::cout<<"Total TCP TP: "<< tcpTP << std::endl;
+	for(int i=0;i<2;i++)
+	{
+		dataiUDPvR[i].Add(curRate, throughputUDP[i]);
+		std::cout<<throughputUDP[i]<<" ";
+	}
+	std::cout<<"Total UDP TP: "<< udpTP << std::endl;
+	
+	datatcpTPvR.Add(curRate, tcpTP);
+	dataudpTPvR.Add(curRate, udpTP);
+	
+	
+	curRate += 10; 
+	return;
+}
+
+void makeDataSet(Gnuplot2dDataset &dataset, std::string name)
+{
+	dataset.SetTitle("Name");
+	dataset.SetStyle(Gnuplot2dDataset::LINES_POINTS);
+} 
+
+void getPlot(std::string fname, std::string title, std::string legendx, std::string legendy, std::string extra, Gnuplot2dDataset &dataset)
+{
+	std::ofstream plotFile((fname + ".plt").c_str());
+	Gnuplot plot(fname + ".png");
+	plot.SetTitle(title);
+	plot.SetTerminal("png");
+	plot.AppendExtra(extra);
+	plot.SetLegend(legendx, legendy);
+	plot.AddDataset(dataset);
+	plot.GenerateOutput(plotFile);
+	plotFile.close();
+	return;
+}
