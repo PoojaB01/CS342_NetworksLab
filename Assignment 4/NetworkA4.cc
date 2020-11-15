@@ -20,9 +20,8 @@ uint packetSize = 1500;
 NS_LOG_COMPONENT_DEFINE("Assignment4");
 	
 // store source and destination of TCP and UDP connections
-std::set<std::pair<Ipv4Address, Ipv4Address>> tcpSet, udpSet;
-
-// 
+std::map<std::pair<Ipv4Address, Ipv4Address>, uint16_t> tcpSet, udpSet;
+ 
 Gnuplot2dDataset dataiTCPvR[4], dataiUDPvR[2];
 Gnuplot2dDataset datatcpTPvR, dataudpTPvR;
 
@@ -30,18 +29,18 @@ class MyApp : public Application
 {
 public:
 
-  MyApp ();
+  MyApp();
   virtual ~MyApp();
 
-  void Setup (Ptr<Socket> socket, Address address, uint32_t packetSize, uint32_t nPackets, DataRate dataRate);
+  void Setup(Ptr<Socket> socket, Address address, uint32_t packetSize, uint32_t nPackets, DataRate dataRate);
   void setRate(DataRate newRate);
 
 private:
-  virtual void StartApplication (void);
-  virtual void StopApplication (void);
+  virtual void StartApplication(void);
+  virtual void StopApplication(void);
 
-  void ScheduleTx (void);
-  void SendPacket (void);
+  void ScheduleTx(void);
+  void SendPacket(void);
 	
   Ptr<Socket>     m_socket;
   Address         m_peer;
@@ -53,15 +52,15 @@ private:
   uint32_t        m_packetsSent;
 };
 
-MyApp::MyApp ()
-  : m_socket (0), 
-    m_peer (), 
-    m_packetSize (0), 
-    m_nPackets (0), 
-    m_dataRate (0), 
-    m_sendEvent (), 
-    m_running (false), 
-    m_packetsSent (0)
+MyApp::MyApp()
+  : m_socket(0), 
+    m_peer(), 
+    m_packetSize(0), 
+    m_nPackets(0), 
+    m_dataRate(0), 
+    m_sendEvent(), 
+    m_running(false), 
+    m_packetsSent(0)
 {
 }
 
@@ -71,7 +70,7 @@ MyApp::~MyApp()
 }
 
 void
-MyApp::Setup (Ptr<Socket> socket, Address address, uint32_t packetSize, uint32_t nPackets, DataRate dataRate)
+MyApp::Setup(Ptr<Socket> socket, Address address, uint32_t packetSize, uint32_t nPackets, DataRate dataRate)
 {
   m_socket = socket;
   m_peer = address;
@@ -81,50 +80,50 @@ MyApp::Setup (Ptr<Socket> socket, Address address, uint32_t packetSize, uint32_t
 }
 
 void
-MyApp::StartApplication (void)
+MyApp::StartApplication(void)
 {
   m_running = true;
   m_packetsSent = 0;
-  m_socket->Bind ();
-  m_socket->Connect (m_peer);
-  SendPacket ();
+  m_socket->Bind();
+  m_socket->Connect(m_peer);
+  SendPacket();
 }
 
 void 
-MyApp::StopApplication (void)
+MyApp::StopApplication(void)
 {
   m_running = false;
 
-  if (m_sendEvent.IsRunning ())
+  if(m_sendEvent.IsRunning())
     {
-      Simulator::Cancel (m_sendEvent);
+      Simulator::Cancel(m_sendEvent);
     }
 
-  if (m_socket)
+  if(m_socket)
     {
-      m_socket->Close ();
-    }
-}
-
-void 
-MyApp::SendPacket (void)
-{
-  Ptr<Packet> packet = Create<Packet> (m_packetSize);
-  m_socket->Send (packet);
-
-  if (++m_packetsSent < m_nPackets)
-    {
-      ScheduleTx ();
+      m_socket->Close();
     }
 }
 
 void 
-MyApp::ScheduleTx (void)
+MyApp::SendPacket(void)
 {
-  if (m_running)
+  Ptr<Packet> packet = Create<Packet>(m_packetSize);
+  m_socket->Send(packet);
+
+  if(++m_packetsSent < m_nPackets)
     {
-      Time tNext (Seconds (m_packetSize * 8 / static_cast<double> (m_dataRate.GetBitRate ())));
-      m_sendEvent = Simulator::Schedule (tNext, &MyApp::SendPacket, this);
+      ScheduleTx();
+    }
+}
+
+void 
+MyApp::ScheduleTx(void)
+{
+  if(m_running)
+    {
+      Time tNext(Seconds(m_packetSize * 8 / static_cast<double>(m_dataRate.GetBitRate())));
+      m_sendEvent = Simulator::Schedule(tNext, &MyApp::SendPacket, this);
     }
 }
 
@@ -135,13 +134,16 @@ MyApp::setRate(DataRate newRate)
 	return;
 }
 	
+uint16_t n_tcp = 0; // Used for indexing udp connections
 
 void setTCPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port)
 {
 	uint16_t sinkPort = port;
+	
 	Address sinkAddress(InetSocketAddress(iface.GetAddress(0), sinkPort));
-	PacketSinkHelper PSH("ns3::TcpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), sinkPort));
+	PacketSinkHelper PSH("ns3::TcpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), sinkPort));
 	ApplicationContainer appCont = PSH.Install(H.Get(sink));
+	
 	appCont.Start(Seconds(0));
 	appCont.Stop(Seconds(10));
 	
@@ -152,18 +154,24 @@ void setTCPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4Inter
 	Ptr<MyApp> app = CreateObject<MyApp>();
 	app->Setup(socket, sinkAddress, packetSize, 1000000, DataRate("20Mbps"));
 	H.Get(source)->AddApplication(app);
+	
 	app->SetStartTime(Seconds(1));
 	app->SetStopTime(Seconds(10));
-	tcpSet.insert(std::make_pair(iface1.GetAddress(0), iface.GetAddress(0)));
+	
+	tcpSet[std::make_pair(iface1.GetAddress(0), iface.GetAddress(0))] = n_tcp++;
 	
 }
+
+uint16_t n_udp = 0; // Used for indexing udp connections
 
 Ptr<MyApp> setUDPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv4InterfaceContainer &iface1, int source, int sink, int bufferSize, int port)
 {
 	uint16_t sinkPort = port;
+	
 	Address sinkAddress(InetSocketAddress(iface.GetAddress(0), sinkPort));
-	PacketSinkHelper PSH("ns3::UdpSocketFactory", InetSocketAddress (Ipv4Address::GetAny (), sinkPort));
+	PacketSinkHelper PSH("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), sinkPort));
 	ApplicationContainer appCont = PSH.Install(H.Get(sink));
+	
 	appCont.Start(Seconds(0));
 	appCont.Stop(Seconds(10));
 	
@@ -173,65 +181,49 @@ Ptr<MyApp> setUDPconnection(NodeContainer &H, Ipv4InterfaceContainer &iface, Ipv
 	Ptr<MyApp> app = CreateObject<MyApp>();
 	app->Setup(socket, sinkAddress, packetSize, 1000000, DataRate("20Mbps"));
 	H.Get(source)->AddApplication(app);
+	
 	app->SetStartTime(Seconds(1));
 	app->SetStopTime(Seconds(10));
-	udpSet.insert(std::make_pair(iface1.GetAddress(0), iface.GetAddress(0)));
+	
+	udpSet[std::make_pair(iface1.GetAddress(0), iface.GetAddress(0))] = n_udp++;
 	
 	return app;
 }
+
 uint curRate = 20;
+
 void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHelp, Ptr<FlowMonitor> flowMonitor)
 {
 	app->setRate(newRate);
 	
 	std::cout<<"Varying UDP rate. Current Rate: "<<curRate<<" Mbps\n";
-	Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier> (flowMonitorHelp->GetClassifier ());
-	std::map<FlowId, FlowMonitor::FlowStats> Stats = flowMonitor->GetFlowStats ();
+	Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier>(flowMonitorHelp->GetClassifier());
+	std::map<FlowId, FlowMonitor::FlowStats> Stats = flowMonitor->GetFlowStats();
 
 	double tcpTP = 0, udpTP = 0;
 	
 	// Store individual connection throughput
 	double throughputTCP[4] = {0}, throughputUDP[2] = {0};
 	
-	for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = Stats.begin (); i != Stats.end (); ++i)
+	for(std::map<FlowId, FlowMonitor::FlowStats>::const_iterator itr = Stats.begin(); itr != Stats.end(); itr++)
 	{
-		Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow (i->first);
+		Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow(itr->first);
 		
 		//Calculate the throughput of the flow
-		double throughPut = i->second.rxBytes * 8.0 / (i->second.timeLastRxPacket.GetSeconds() - i->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
+		double throughPut = itr->second.rxBytes * 8.0 /(itr->second.timeLastRxPacket.GetSeconds() - itr->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
 
-		
-		if(ft.sourceAddress == "10.1.2.1" && ft.destinationAddress == "10.1.1.1")
+		if(tcpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != tcpSet.end())
 		{
 			tcpTP += throughPut;
-			throughputTCP[0] += throughPut;
+			throughputTCP[tcpSet[std::make_pair(ft.sourceAddress, ft.destinationAddress)]] += throughPut;
 		}
-		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.6.1")
-		{
-			tcpTP += throughPut;
-			throughputTCP[1] += throughPut;
-		}
-		else if(ft.sourceAddress == "10.1.4.1" && ft.destinationAddress == "10.1.6.1")
-		{
-			tcpTP += throughPut;
-			throughputTCP[2] += throughPut;
-		}
-		else if(ft.sourceAddress == "10.1.5.1" && ft.destinationAddress == "10.1.2.1")
-		{
-			tcpTP += throughPut;
-			throughputTCP[3] += throughPut;
-		}
-		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.4.1")
-		{
+		if(udpSet.find(std::make_pair(ft.sourceAddress, ft.destinationAddress)) != udpSet.end())
+		{ 
 			udpTP += throughPut;
-		    	throughputUDP[0] += throughPut;
-		}
-		else if(ft.sourceAddress == "10.1.3.1" && ft.destinationAddress == "10.1.1.1")
-		{
-			udpTP += throughPut;
-			throughputUDP[1] += throughPut;
+			throughputUDP[udpSet[std::make_pair(ft.sourceAddress, ft.destinationAddress)]] += throughPut;
 		}
 	}
+	
 	for(int i=0;i<4;i++)
 	{
 		dataiTCPvR[i].Add(curRate, throughputTCP[i]);
@@ -255,23 +247,22 @@ void IncRate(Ptr<MyApp> app, DataRate newRate, FlowMonitorHelper *flowMonitorHel
 
 void makeDataSet(Gnuplot2dDataset &dataset, std::string name)
 {
-	dataset.SetTitle ("Name");
-	dataset.SetStyle (Gnuplot2dDataset::LINES_POINTS);
+	dataset.SetTitle("Name");
+	dataset.SetStyle(Gnuplot2dDataset::LINES_POINTS);
 } 
 
-void getPlot(std :: string fname, std :: string plotTitle, std :: string legendx, std :: string legendy, std :: string extra, Gnuplot2dDataset &dataset)
+void getPlot(std::string fname, std::string title, std::string legendx, std::string legendy, std::string extra, Gnuplot2dDataset &dataset)
 {
-	std :: string gfname        = fname + ".png";
-	std :: string pfname        = fname + ".plt";
-	Gnuplot plot (gfname);
-	plot.SetTitle (plotTitle);
-	plot.SetTerminal ("png");
-	plot.SetLegend (legendx, legendy);
-	plot.AppendExtra (extra);
-	plot.AddDataset (dataset);
-	std::ofstream plotFile (pfname.c_str());
-	plot.GenerateOutput (plotFile);
-	plotFile.close ();
+	std::ofstream plotFile((fname + ".plt").c_str());
+	Gnuplot plot(fname + ".png");
+	plot.SetTitle(title);
+	plot.SetTerminal("png");
+	plot.AppendExtra(extra);
+	plot.SetLegend(legendx, legendy);
+	plot.AddDataset(dataset);
+	plot.GenerateOutput(plotFile);
+	plotFile.close();
+	return;
 }
 
 int main(int argc, char *argv[])
@@ -280,7 +271,7 @@ int main(int argc, char *argv[])
 	Time::SetResolution(Time::NS);
 	
 	// Setting defualt configuration to TCP New Reno
-	Config::SetDefault("ns3::TcpL4Protocol::SocketType", TypeIdValue (TcpNewReno::GetTypeId()));
+	Config::SetDefault("ns3::TcpL4Protocol::SocketType", TypeIdValue(TcpNewReno::GetTypeId()));
 	
 	// Initialize datasets
 	Gnuplot2dDataset DataTPvBS;
@@ -350,43 +341,49 @@ int main(int argc, char *argv[])
 		
 		p2p.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
 		p2p.SetChannelAttribute("Delay", StringValue("100ms"));
-		p2p.SetQueue ("ns3::DropTailQueue", "MaxSize", QueueSizeValue (QueueSize ("85p")));
+		p2p.SetQueue("ns3::DropTailQueue", "MaxSize", QueueSizeValue(QueueSize("85p")));
 		
 		NetDeviceContainer nd_R1R2 = p2p.Install(n_R1R2);
 		
 		// Setup IP addresses
 		Ipv4AddressHelper ipv4;
 		
-		ipv4.SetBase ("10.1.1.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_H1R1 = ipv4.Assign (nd_H1R1);
-		ipv4.SetBase ("10.1.2.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_H2R1 = ipv4.Assign (nd_H2R1);
-		ipv4.SetBase ("10.1.3.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_H3R1 = ipv4.Assign (nd_H3R1);
-		ipv4.SetBase ("10.1.4.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_H4R2 = ipv4.Assign (nd_H4R2);
-		ipv4.SetBase ("10.1.5.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_H5R2 = ipv4.Assign (nd_H5R2);
-		ipv4.SetBase ("10.1.6.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_H6R2 = ipv4.Assign (nd_H6R2);
-		ipv4.SetBase ("10.1.7.0", "255.255.255.0");
-		Ipv4InterfaceContainer i_R1R2 = ipv4.Assign (nd_R1R2);
+		ipv4.SetBase("10.1.1.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_H1R1 = ipv4.Assign(nd_H1R1);
 		
-		Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
+		ipv4.SetBase("10.1.2.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_H2R1 = ipv4.Assign(nd_H2R1);
+		
+		ipv4.SetBase("10.1.3.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_H3R1 = ipv4.Assign(nd_H3R1);
+		
+		ipv4.SetBase("10.1.4.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_H4R2 = ipv4.Assign(nd_H4R2);
+		
+		ipv4.SetBase("10.1.5.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_H5R2 = ipv4.Assign(nd_H5R2);
+		
+		ipv4.SetBase("10.1.6.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_H6R2 = ipv4.Assign(nd_H6R2);
+		
+		ipv4.SetBase("10.1.7.0", "255.255.255.0");
+		Ipv4InterfaceContainer i_R1R2 = ipv4.Assign(nd_R1R2);
+		
+		Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 		
 		// TCP connections
 		
-		// h3 ---> h6
-		setTCPconnection(H, i_H6R2, i_H3R1, 2, 5, bufferSize, 7001);
+		// h2 ---> h1
+		setTCPconnection(H, i_H1R1, i_H2R1, 1, 0, bufferSize, 7001);
 		
-		// h5 ---> h2
-		setTCPconnection(H, i_H2R1, i_H5R2, 4, 1, bufferSize, 7002);
+		// h3 ---> h6
+		setTCPconnection(H, i_H6R2, i_H3R1, 2, 5, bufferSize, 7002);
 		
 		// h4 ---> h6
 		setTCPconnection(H, i_H6R2, i_H4R2, 3, 5, bufferSize, 7003);
 		
-		// h2 ---> h1
-		setTCPconnection(H, i_H1R1, i_H2R1, 1, 0, bufferSize, 7004);
+		// h5 ---> h2
+		setTCPconnection(H, i_H2R1, i_H5R2, 4, 1, bufferSize, 7004);
 		
 		// UDP connections
 		
@@ -402,15 +399,15 @@ int main(int argc, char *argv[])
 		// varying UDP Rate
 		if(flag == 1)
 		{
-			Simulator::Schedule (Seconds(2.0), &IncRate, udpApp, DataRate("30Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(3.0), &IncRate, udpApp, DataRate("40Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(4.0), &IncRate, udpApp, DataRate("50Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(5.0), &IncRate, udpApp, DataRate("60Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(6.0), &IncRate, udpApp, DataRate("70Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(7.0), &IncRate, udpApp, DataRate("80Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(8.0), &IncRate, udpApp, DataRate("90Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(9.0), &IncRate, udpApp, DataRate("100Mbps"), &flowmn, fmonitor_ptr);
-			Simulator::Schedule (Seconds(10.0), &IncRate, udpApp, DataRate("110Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(2.0), &IncRate, udpApp, DataRate("30Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(3.0), &IncRate, udpApp, DataRate("40Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(4.0), &IncRate, udpApp, DataRate("50Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(5.0), &IncRate, udpApp, DataRate("60Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(6.0), &IncRate, udpApp, DataRate("70Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(7.0), &IncRate, udpApp, DataRate("80Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(8.0), &IncRate, udpApp, DataRate("90Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(9.0), &IncRate, udpApp, DataRate("100Mbps"), &flowmn, fmonitor_ptr);
+			Simulator::Schedule(Seconds(10.0), &IncRate, udpApp, DataRate("110Mbps"), &flowmn, fmonitor_ptr);
 		}
 		
 		
@@ -418,21 +415,23 @@ int main(int argc, char *argv[])
 		Simulator::Stop(Seconds(10));
 		Simulator::Run();
 		
-		fmonitor_ptr->CheckForLostPackets ();
+		fmonitor_ptr->CheckForLostPackets();
 		
-		Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier> (flowmn.GetClassifier ());
+		// Identifies the source and destination IP addresses
+		Ptr<Ipv4FlowClassifier> classifier = DynamicCast<Ipv4FlowClassifier>(flowmn.GetClassifier());
 		
-		std::map<FlowId, FlowMonitor::FlowStats> Stats = fmonitor_ptr->GetFlowStats ();
+		// Moniters flows through different links
+		std::map<FlowId, FlowMonitor::FlowStats> Stats = fmonitor_ptr->GetFlowStats();
 		
 		double sumFlow = 0, sumFlowSquare = 0;
 		double tcpTP = 0, udpTP = 0;
 		
-		for (std::map<FlowId, FlowMonitor::FlowStats>::const_iterator i = Stats.begin (); i != Stats.end (); ++i)
+		for(std::map<FlowId, FlowMonitor::FlowStats>::const_iterator itr = Stats.begin(); itr != Stats.end(); itr++)
 		{
-			Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow (i->first);
+			Ipv4FlowClassifier::FiveTuple ft = classifier->FindFlow(itr->first);
 			
 			//Calculate the throughput of the flow
-			double throughPut = i->second.rxBytes * 8.0 / (i->second.timeLastRxPacket.GetSeconds() - i->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
+			double throughPut = itr->second.rxBytes * 8.0 /(itr->second.timeLastRxPacket.GetSeconds() - itr->second.timeFirstTxPacket.GetSeconds())/(1024*1024);
 			sumFlow += throughPut;
 			sumFlowSquare += throughPut * throughPut ;
 			
@@ -447,19 +446,20 @@ int main(int argc, char *argv[])
 			}
 			
 		}
-		double FairnessIndex = (sumFlow * sumFlow)/ (6 * sumFlowSquare);
+		double FairnessIndex =(sumFlow * sumFlow)/(6 * sumFlowSquare);
 		
 		// Adding to the dataset
 		if(flag == 0)
 		{
-			DataFairvBS.Add (bufferSize/packetSize, FairnessIndex);
-			DatatcpTPvBS.Add (bufferSize/packetSize, tcpTP);
-			DataudpTPvBS.Add (bufferSize/packetSize, udpTP);
+			uint bs = bufferSize/packetSize;
+			DataFairvBS.Add(bs, FairnessIndex);
+			DatatcpTPvBS.Add(bs, tcpTP);
+			DataudpTPvBS.Add(bs, udpTP);
 			std::cout<<"Varying Buffer Size. Current Size: "<<bufferSize/packetSize<<"\n";
 			std::cout<<"TCP TP: "<<tcpTP<<" UDP TP: "<<udpTP<<" Fairness: "<<FairnessIndex<<std::endl;
 		
-		
-			if(bufferSize < 100*packetSize)
+			// Updating buffer Size
+			if(bs < 100)
 			{
 				bufferSize += 15*packetSize;
 			}
@@ -474,9 +474,6 @@ int main(int argc, char *argv[])
 	}
 	
 	// Generate plt files
-	getPlot("FairnessvBS", "Fairness vs Buffer Size", "Buffer Size (no. of packets)", "Fairness", "set xrange [0:800]", DataFairvBS);
-	getPlot("TCPTPvBS", "TCP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput (Mbps)", "set xrange [0:800]", DatatcpTPvBS);
-	getPlot("UDPTPvBS", "UDP Throughput vs Buffer Size", "Buffer Size (no. of packets)", "Throughput (Mbps)", "set xrange [0:800]", DataudpTPvBS);
 	
 	for(int i=0;i<4;i++)
 	{
@@ -486,7 +483,7 @@ int main(int argc, char *argv[])
 		title = title + std::to_string(i+1);
 		title += " vs UDP Rate";
 		
-		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
+		getPlot(label, title, "UDP Rate(Mbps)", "Throughput(Mbps)", "set xrange [10:100]", dataiTCPvR[i]);
 	}
 	
 	for(int i=0;i<2;i++)
@@ -497,11 +494,17 @@ int main(int argc, char *argv[])
 		title = title + std::to_string(i+1);
 		title += " vs UDP Rate";
 		
-		getPlot(label, title, "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataiUDPvR[i]);
+		getPlot(label, title, "UDP Rate(Mbps)", "Throughput(Mbps)", "set xrange [10:100]", dataiUDPvR[i]);
 	}
+	getPlot("TCPTPvRate", "TCP Throughput vs UDP Rate", "UDP Rate(Mbps)", "Throughput(Mbps)", "set xrange [10:100]", datatcpTPvR);
+	getPlot("UDPTPvRate", "UDP Throughput vs UDP Rate", "UDP Rate(Mbps)", "Throughput(Mbps)", "set xrange [10:100]", dataudpTPvR);
 	
-	getPlot("TCPTPvRate", "TCP Throughput vs UDP Rate", "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", datatcpTPvR);
-	getPlot("UDPTPvRate", "UDP Throughput vs UDP Rate", "UDP Rate (Mbps)", "Throughput (Mbps)", "set xrange [10:100]", dataudpTPvR);
+	getPlot("FairnessvBS", "Fairness vs Buffer Size", "Buffer Size(no. of packets)", "Fairness", "set xrange [0:800]", DataFairvBS);
+	getPlot("TCPTPvBS", "TCP Throughput vs Buffer Size", "Buffer Size(no. of packets)", "Throughput(Mbps)", "set xrange [0:800]", DatatcpTPvBS);
+	getPlot("UDPTPvBS", "UDP Throughput vs Buffer Size", "Buffer Size(no. of packets)", "Throughput(Mbps)", "set xrange [0:800]", DataudpTPvBS);
+	
+	return 0;
+	
 }
 		
 		
