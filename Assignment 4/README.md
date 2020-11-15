@@ -16,7 +16,8 @@ Run the following command just outside the scratch folder in the Linux terminal:
 $ ./waf --run scratch/NetworkA4
 ```
 
-The above command will generate .plt files for all graphs. To obtain the image file of respective graph (in .png format), run the following command:
+The above command will generate .plt files for all graphs. To obtain the image file of respective graph (in .png format), run the following command from outside the 'scratch' folder:
+
 ```bash
 $ gnuplot <filename>
 ```
